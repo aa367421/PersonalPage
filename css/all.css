@@ -1,0 +1,306 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+body {
+  background: #101211;
+  color: #f0f1f0;
+  font-family: "microsoft jhenghei";
+}
+
+.container {
+  width: 100%;
+  height: 1080px;
+}
+
+.header {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-color: #101211;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0% 3%;
+  font-size: 20px;
+}
+.list li {
+  margin-right: 7px;
+  padding: 7px 0px;
+  border-left: 5px solid #f0f1f0;
+  width: 0px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  text-align: center;
+  cursor: pointer;
+  opacity: 1;
+}
+.list li.active {
+  opacity: 0.7;
+  margin-right: 0px;
+  padding: 2% 15px;
+  text-indent: 0%;
+  width: 100px;
+  border-left: 3px solid #101211;
+}
+.list li:hover {
+  color: #FFF;
+  opacity: 1;
+}
+
+.footer {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .footerImg {
+  width: 180px;
+  height: 180px;
+  margin-right: 100px;
+}
+.footer p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.home {
+  width: 95%;
+}
+
+.banner {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.banner .mask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-animation: Mask 2s ease forwards;
+          animation: Mask 2s ease forwards;
+}
+@-webkit-keyframes Mask {
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@keyframes Mask {
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+.banner svg {
+  display: block;
+  width: 900px;
+  height: 400px;
+}
+.banner svg path {
+  stroke: #FFF;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+.banner svg .Lstroke {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1150;
+  -webkit-animation: Ldash 3s 1s ease-out forwards;
+          animation: Ldash 3s 1s ease-out forwards;
+}
+@-webkit-keyframes Ldash {
+  to {
+    stroke-opacity: 1;
+    stroke-dashoffset: -500;
+  }
+}
+@keyframes Ldash {
+  to {
+    stroke-opacity: 1;
+    stroke-dashoffset: -500;
+  }
+}
+.banner svg .Rstroke {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  -webkit-animation: Rdash 3s 1s ease-out forwards;
+          animation: Rdash 3s 1s ease-out forwards;
+}
+@-webkit-keyframes Rdash {
+  to {
+    stroke-opacity: 1;
+    stroke-dashoffset: 10;
+  }
+}
+@keyframes Rdash {
+  to {
+    stroke-opacity: 1;
+    stroke-dashoffset: 10;
+  }
+}
+.banner p {
+  position: absolute;
+  top: 40%;
+  font-size: 0px;
+  opacity: 0;
+  -webkit-animation: TitleBig 1.5s 2.5s ease-out forwards;
+          animation: TitleBig 1.5s 2.5s ease-out forwards;
+}
+.banner span {
+  position: absolute;
+  top: 55%;
+  font-size: 0px;
+  opacity: 0;
+  -webkit-animation: TitleSmall 1.5s 3s ease-out forwards;
+          animation: TitleSmall 1.5s 3s ease-out forwards;
+}
+@-webkit-keyframes TitleBig {
+  to {
+    opacity: 1;
+    font-size: 70px;
+  }
+}
+@keyframes TitleBig {
+  to {
+    opacity: 1;
+    font-size: 70px;
+  }
+}
+@-webkit-keyframes TitleSmall {
+  to {
+    opacity: 1;
+    font-size: 45px;
+  }
+}
+@keyframes TitleSmall {
+  to {
+    opacity: 1;
+    font-size: 45px;
+  }
+}
