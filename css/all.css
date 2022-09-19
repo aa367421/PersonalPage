@@ -79,51 +79,55 @@ body {
 
 .container {
   width: 100%;
-  height: 1080px;
 }
 
 .header {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   background-color: #101211;
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  border-bottom: 2px solid #f0f1f0;
 }
 
 .list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0% 3%;
+  padding: 1.5% 3%;
   font-size: 20px;
 }
-.list li {
+.list li a {
   margin-right: 7px;
   padding: 7px 0px;
   border-left: 5px solid #f0f1f0;
+  color: #f0f1f0;
   width: 0px;
   text-indent: 101%;
-  overflow: hidden;
   white-space: nowrap;
-  -webkit-transition: 1s all;
-  transition: 1s all;
+  overflow: hidden;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
   text-align: center;
   cursor: pointer;
   opacity: 1;
 }
-.list li.active {
+.list li a.active {
   opacity: 0.7;
   margin-right: 0px;
   padding: 2% 15px;
@@ -131,9 +135,43 @@ body {
   width: 100px;
   border-left: 3px solid #101211;
 }
-.list li:hover {
+.list li a:hover {
   color: #FFF;
   opacity: 1;
+}
+.list .work {
+  position: relative;
+}
+.list .work:hover ul {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  opacity: 1;
+}
+.list .work ul {
+  position: absolute;
+  top: 105%;
+  width: 105px;
+  padding: unset;
+  margin: unset;
+  z-index: 10;
+  background-color: #101211;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  opacity: 0.3;
+}
+.list .work ul li {
+  padding: 10%;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+.list .work ul li:hover {
+  background-color: #f0f1f0;
+  color: #101211;
 }
 
 .footer {
@@ -147,6 +185,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-top: 2px solid #f0f1f0;
 }
 .footer .footerImg {
   width: 180px;
@@ -165,7 +204,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  margin-top: 75px;
 }
 
 .home {
@@ -174,9 +217,22 @@ body {
 
 .banner {
   position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+.banner img {
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: FadeIn 1.5s ease forwards;
+          animation: FadeIn 1.5s ease forwards;
+}
+@-webkit-keyframes FadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes FadeIn {
+  to {
+    opacity: 1;
+  }
 }
 .banner .mask {
   position: absolute;
@@ -218,7 +274,7 @@ body {
 .banner svg {
   display: block;
   width: 900px;
-  height: 400px;
+  height: 200px;
 }
 .banner svg path {
   stroke: #FFF;
@@ -226,42 +282,42 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill-opacity: 0;
-  stroke-opacity: 0;
+  stroke-opacity: 0.5;
 }
 .banner svg .Lstroke {
-  stroke-dasharray: 1600;
-  stroke-dashoffset: 1150;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
   -webkit-animation: Ldash 3s 1s ease-out forwards;
           animation: Ldash 3s 1s ease-out forwards;
 }
 @-webkit-keyframes Ldash {
   to {
     stroke-opacity: 1;
-    stroke-dashoffset: -500;
+    stroke-dashoffset: 0;
   }
 }
 @keyframes Ldash {
   to {
     stroke-opacity: 1;
-    stroke-dashoffset: -500;
+    stroke-dashoffset: 0;
   }
 }
 .banner svg .Rstroke {
-  stroke-dasharray: 1600;
-  stroke-dashoffset: 1600;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
   -webkit-animation: Rdash 3s 1s ease-out forwards;
           animation: Rdash 3s 1s ease-out forwards;
 }
 @-webkit-keyframes Rdash {
   to {
     stroke-opacity: 1;
-    stroke-dashoffset: 10;
+    stroke-dashoffset: 0;
   }
 }
 @keyframes Rdash {
   to {
     stroke-opacity: 1;
-    stroke-dashoffset: 10;
+    stroke-dashoffset: 0;
   }
 }
 .banner p {
@@ -303,4 +359,160 @@ body {
     opacity: 1;
     font-size: 45px;
   }
+}
+
+.title {
+  margin: 20px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 28px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.card li {
+  position: relative;
+  width: 30%;
+  height: 300px;
+  background-color: #FFF;
+  border-radius: 1%;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  overflow: hidden;
+  -webkit-transform: translateY(250px);
+          transform: translateY(250px);
+  cursor: pointer;
+}
+.card li:hover .cardImg img {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+.card li:hover .cardText {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+.card li.active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.card li .cardImg {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 0px;
+  left: 0px;
+}
+.card li .cardImg img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+.card li .cardText {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  bottom: 0px;
+  right: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(16, 18, 17, 0)), color-stop(90%, #000));
+  background: linear-gradient(rgba(16, 18, 17, 0) 10%, #000 90%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform: translate(0%, 80%);
+          transform: translate(0%, 80%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.card li .cardText p {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f0f1f0;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about .aboutContent {
+  margin-right: 50px;
+}
+.about .aboutContent h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.about .aboutContent p {
+  line-height: 30px;
+}
+.about img {
+  width: 25%;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+  margin-bottom: 100px;
+}
+.contact img {
+  width: 25%;
+  margin-right: 50px;
+}
+.contact .contactContent {
+  position: relative;
+}
+.contact .contactContent p {
+  text-align: left;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.contact .contactContent i {
+  font-size: 30px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.about > div, .about > img, .contact > img, .contact > div {
+  -webkit-transform: translateY(250px);
+          transform: translateY(250px);
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+.about > div.active, .about > img.active, .contact > img.active, .contact > div.active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }

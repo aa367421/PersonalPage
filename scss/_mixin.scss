@@ -1,4 +1,4 @@
-@mixin hide-text {
+@mixin hideText {
     text-indent: 101%;
     white-space: nowrap;
     overflow: hidden;
@@ -31,4 +31,10 @@
         padding: unset;
         font-size: 14px;
     }
+}
+
+@mixin flex($j:center, $a:center){
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
 }

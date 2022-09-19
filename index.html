@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>李文哲 LI WEN CHE</title>
+    <title>李文哲 Ian Li</title>
 
     <meta name='description' content="Start: 220914  Latest: 220914">
 
@@ -22,35 +22,87 @@
     <div class="container">
         <div class="header">
             <ul class="list">
-                <li>聯絡我</li>
-                <li>關於我</li>
-                <li>作品</li>
-                <li>首頁</li>
+                <li><a href="#contact">聯絡我</a></li>
+                <li><a href="#about">關於我</a></li>
+                <li class="work">
+                    <a href="#work">作品</a>
+                    <ul>
+                        <li>劇場</li>
+                        <li>劇場</li>
+                        <li>劇場</li>
+                    </ul>
+                </li>
+                <li><a href="#banner">首頁</a></li>
             </ul>
         </div>
         <div class="main">
             <div class="home">
-                <div class="banner">
+                <div class="banner" id="banner">
                     <img src="./img/Banner.png" alt="">
                     <div class="mask">
                         <svg>
-                            <path class="Lstroke" d="M0 900 V 0 H 1450"></path>
-                            <path class="Rstroke" d="M900 0 V 400 H 0"></path>
+                            <path class="Lstroke" d="M0 200 V 0 H 900"></path>
+                            <path class="Rstroke" d="M900 0 V 200 H 0"></path>
                         </svg>
                     <p>Hi, 我是李文哲</p>
                     <span>劇場．前端．學習</span>
+                    </div>
+                </div>
+                <h2 class="cardTitle title" id="work">作品</h2>
+                <ul class="card">
+                    <li>
+                        <div class="cardImg">
+                            <img src="./img/CardImg.jpg" alt="">
+                        </div>
+                        <div class="cardText">
+                            <p>劇場</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cardImg">
+                            <img src="./img/CardImg.jpg" alt="">
+                        </div>
+                        <div class="cardText">
+                            <p>劇場</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cardImg">
+                            <img src="./img/CardImg.jpg" alt="">
+                        </div>
+                        <div class="cardText">
+                            <p>劇場</p>
+                        </div>
+                    </li>
+                </ul>
+                <h2 class="aboutTitle title" id="about">關於我</h2>
+                <div class="about">
+                    <div class="aboutContent">
+                        <h1>李文哲　Ian Li</h1>
+                        <p class="aboutText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium deleniti temporibus<br> obcaecati commodi quo, fugiat eligendi possimus fuga illum ab.</p>     
+                    </div>
+                    <img src="./img/FooterPhoto.png" alt="">
+                </div>
+                <h2 class="contactTitle title" id="contact">聯絡我</h2>
+                <div class="contact">
+                    <img src="./img/FooterPhoto.png" alt="">
+                    <div class="contactContent">
+                        <p>Email：aa367421@gmail.com<br>電話：0983-619-290</p>
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer">
             <div class="footerImg">
-                <img src="./img/footerPhoto.png" alt="" class="footerImg">
+                <img src="./img/FooterPhoto.png" alt="" class="footerImg">
             </div>
             <p class="footerContact">
-                李文哲<br>Email：aa367421@gmail.com<br>電話：0983619290</p>
+                李文哲<br>Email：aa367421@gmail.com<br>電話：0983-619-290</p>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="./js/all.js"></script>
 </body>
 </html>
