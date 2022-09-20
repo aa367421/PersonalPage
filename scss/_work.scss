@@ -1,0 +1,52 @@
+.btnGroup{
+    @include flex(space-around, center);
+    width: 100%;
+    padding: 50px 0px;
+    // background-color: #fff;
+    form{
+        @include flex(space-around,center);
+        width: 35%;
+        button{
+            @include btn;
+        }
+    }
+}
+
+.workCard{
+    @include flex(flex-start,center);
+    flex-wrap: wrap;
+    li{
+        cursor: pointer;
+        border-radius: 1%;
+        overflow: hidden;
+        width: 33%;
+        transition: 1s ease all;
+        position: relative;
+        &.unseen{
+            display: none;
+        }
+        &:hover{
+            z-index: 10;
+            transform: scale(1.05, 1.05);
+            p{
+                transform: translate(0%, 0%);
+            }
+        }
+    }
+    // img{
+    // }
+    p{
+        @include flex(center, flex-end);
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        bottom: 0;
+        background: linear-gradient(rgba(16, 18, 17, 0) 10%, #000 90%);
+        font-size: $contentSize;
+        margin-right: 50px;
+        padding-bottom: 15px;
+        color: $theme-color-light;
+        transform: translate(0%, 80%);
+        transition: 0.5s ease all;
+    }
+}

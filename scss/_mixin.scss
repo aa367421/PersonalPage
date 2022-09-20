@@ -17,19 +17,25 @@
 }
 
 @mixin btn {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
-
-    input{
-        cursor: pointer;
-        color: #FFF;
-        border: 0px;
-        border-radius: 3px;
-        margin: unset;
-        padding: unset;
-        font-size: 14px;
+    width: 25%;
+    height: 50px;
+    text-align: center;
+    font-size: $contentSize;
+    font-family: 'microsoft jhenghei';
+    background-color: $theme-color-dark;
+    color: $theme-color-light;
+    border-radius: 2%;
+    border: 2px solid $theme-color-light;
+    cursor: pointer;
+    transition: 0.5s ease all;
+    &:hover, &.active{
+        background-color: $theme-color-light;
+        color: $theme-color-dark;
+        // border: 2px solid $theme-color-dark;
+        // box-shadow: 0px 0px 5px $theme-color-light;
+    }
+    &.active:hover{
+        box-shadow: 0px 0px 5px 2px $theme-color-light;
     }
 }
 

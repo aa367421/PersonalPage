@@ -59,6 +59,7 @@ table {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-user-drag: none;
 }
 
 img {
@@ -71,10 +72,29 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #101211;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(240, 241, 240, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(240, 241, 240, 0.5);
+}
+
 body {
   background: #101211;
   color: #f0f1f0;
   font-family: "microsoft jhenghei";
+  overflow-x: hidden;
+  overflow-y: overlay;
 }
 
 .container {
@@ -87,10 +107,19 @@ body {
   background-color: #101211;
   width: 100%;
   height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   border-bottom: 2px solid #f0f1f0;
 }
 
@@ -109,7 +138,8 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  padding: 1.5% 3%;
+  width: 25%;
+  padding: 1% 3%;
   font-size: 20px;
 }
 .list li a {
@@ -209,6 +239,8 @@ body {
           align-items: center;
   width: 100%;
   margin-top: 75px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .home {
@@ -366,7 +398,11 @@ body {
   text-align: center;
   line-height: 50px;
   font-size: 28px;
-  cursor: pointer;
+}
+.title a {
+  display: inline;
+  padding: 0% 2%;
+  color: #f0f1f0;
   text-decoration: underline;
 }
 
@@ -407,6 +443,12 @@ body {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
+.card li.locating {
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+  z-index: 10;
+  opacity: 0;
+}
 .card li .cardImg {
   position: absolute;
   width: 100%;
@@ -428,8 +470,6 @@ body {
   height: 80px;
   bottom: 0px;
   right: 0px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(16, 18, 17, 0)), color-stop(90%, #000));
-  background: linear-gradient(rgba(16, 18, 17, 0) 10%, #000 90%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,6 +479,8 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(16, 18, 17, 0)), color-stop(90%, #000));
+  background: linear-gradient(rgba(16, 18, 17, 0) 10%, #000 90%);
   -webkit-transform: translate(0%, 80%);
           transform: translate(0%, 80%);
   -webkit-transition: 0.5s ease;
@@ -515,4 +557,120 @@ body {
 .about > div.active, .about > img.active, .contact > img.active, .contact > div.active {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
+}
+
+.card, .about, .contact {
+  -webkit-transition: 1.5s ease all;
+  transition: 1.5s ease all;
+}
+.card.active, .about.active, .contact.active {
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+  opacity: 0;
+}
+
+.btnGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 50px 0px;
+}
+.btnGroup form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35%;
+}
+.btnGroup form button {
+  width: 25%;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "microsoft jhenghei";
+  background-color: #101211;
+  color: #f0f1f0;
+  border-radius: 2%;
+  border: 2px solid #f0f1f0;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+.btnGroup form button:hover, .btnGroup form button.active {
+  background-color: #f0f1f0;
+  color: #101211;
+}
+.btnGroup form button.active:hover {
+  -webkit-box-shadow: 0px 0px 5px 2px #f0f1f0;
+          box-shadow: 0px 0px 5px 2px #f0f1f0;
+}
+
+.workCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.workCard li {
+  cursor: pointer;
+  border-radius: 1%;
+  overflow: hidden;
+  width: 33%;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  position: relative;
+}
+.workCard li.unseen {
+  display: none;
+}
+.workCard li:hover {
+  z-index: 10;
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+.workCard li:hover p {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+.workCard p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(16, 18, 17, 0)), color-stop(90%, #000));
+  background: linear-gradient(rgba(16, 18, 17, 0) 10%, #000 90%);
+  font-size: 24px;
+  margin-right: 50px;
+  padding-bottom: 15px;
+  color: #f0f1f0;
+  -webkit-transform: translate(0%, 80%);
+          transform: translate(0%, 80%);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
