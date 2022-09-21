@@ -137,6 +137,7 @@ let workCard;
 // 
     // checkWork();
 // }
+const workCards = document.querySelectorAll('.workCard li');
 
 const checkWork = () => {
     let url = new URL(location.href);
@@ -168,75 +169,75 @@ if (card.length !== 0){
 checkWork();
 
 // workbtn click
-// buttonGroup.addEventListener('click', (e) => {
-//     if (e.target.nodeName === "BUTTON"){
-//         e.preventDefault();
+if (buttonGroup !== null){
+    buttonGroup.addEventListener('click', (e) => {
+        if (e.target.nodeName === "BUTTON"){
+            e.preventDefault();
+    
+            // reset viewStatus
+            workCards.forEach(item => {
+                item.classList.remove('unseen');
+            })
+            // toggle class
+            if (!e.target.classList.contains('active')){
+                let ary = Array.from(btns);
+                ary.forEach(item => {
+                    item.classList.remove('active');
+                })
+    
+                ary = ary.filter(item => {
+                if (item.classList.contains('active')){
+                    return true
+                    }
+                })
+    
+                // change viewStatus
+                viewStatus = e.target.value;
+                workCards.forEach(item => {
+                    if (item.dataset.type !== viewStatus){
+                        item.classList.add('unseen');
+                    }
+                })
+            }
+            e.target.classList.toggle('active');
+        }
+    })
 
-//         // reset viewStatus
-//         workCards.forEach(item => {
-//             item.classList.remove('unseen');
-//         })
-//         // toggle class
-//         if (!e.target.classList.contains('active')){
-//             let ary = Array.from(btns);
-//             ary.forEach(item => {
-//                 item.classList.remove('active');
-//             })
-
-//             ary = ary.filter(item => {
-//             if (item.classList.contains('active')){
-//                 return true
-//                 }
-//             })
-
-//             // change viewStatus
-//             viewStatus = e.target.value;
-//             workCards.forEach(item => {
-//                 if (item.dataset.type !== viewStatus){
-//                     item.classList.add('unseen');
-//                 }
-//             })
-//         }
-//         e.target.classList.toggle('active');
-//     }
-// })
-
-
-
-// workCardList.addEventListener('click', (e) => {
-//     if (e.target.closest('li')){
-//         location.href=`work.html#lightbox`;
-//     }
-// //     request.open('GET', jsonURL);
-// //     request.responseType= 'json';
-// //     request.send();
-// //     request.onload = () => {
-// //         let ary = request.response;
-// //         let obj = ary[0].description;
-// //         let {title, job, time, content} = obj;
-// //         let lightbox = document.querySelector('.lightbox');
-// //         lightbox.innerHTML = `
-// //             <div class="lightboxContent">
-// //                 <div class="lightboxImg">
-// //                     <img src="./img/CardImg.jpg" alt="">
-// //                     <img src="./img/CardImg.jpg" alt="">
-// //                     <img src="./img/CardImg.jpg" alt="">
-// //                     <img src="./img/CardImg.jpg" alt="">
-// //                     <img src="./img/CardImg.jpg" alt="">
-// //                     <img src="./img/CardImg.jpg" alt="">
-// //                     <img src="./img/CardImg.jpg" alt="">
-// //                     <img src="./img/CardImg.jpg" alt="">
-// //                     <!-- 燈箱JS -->
-// //                 </div>
-// //                 <div class="lightboxText">
-// //                     <h3>${title}</h3>
-// //                     <span>${job} ${time}</span>
-// //                     <p>${content}</p>
-// //                 </div>
-// //             </div>`;
-// //         location.href=`work.html#lightbox`;
-// //     }
-// })
+    workCardList.addEventListener('click', (e) => {
+        if (e.target.closest('li')){
+            location.href=`work.html#lightbox`;
+        }
+    //     request.open('GET', jsonURL);
+    //     request.responseType= 'json';
+    //     request.send();
+    //     request.onload = () => {
+    //         let ary = request.response;
+    //         let obj = ary[0].description;
+    //         let {title, job, time, content} = obj;
+    //         let lightbox = document.querySelector('.lightbox');
+    //         lightbox.innerHTML = `
+    //             <div class="lightboxContent">
+    //                 <div class="lightboxImg">
+    //                     <img src="./img/CardImg.jpg" alt="">
+    //                     <img src="./img/CardImg.jpg" alt="">
+    //                     <img src="./img/CardImg.jpg" alt="">
+    //                     <img src="./img/CardImg.jpg" alt="">
+    //                     <img src="./img/CardImg.jpg" alt="">
+    //                     <img src="./img/CardImg.jpg" alt="">
+    //                     <img src="./img/CardImg.jpg" alt="">
+    //                     <img src="./img/CardImg.jpg" alt="">
+    //                     <!-- 燈箱JS -->
+    //                 </div>
+    //                 <div class="lightboxText">
+    //                     <h3>${title}</h3>
+    //                     <span>${job} ${time}</span>
+    //                     <p>${content}</p>
+    //                 </div>
+    //             </div>`;
+    //         location.href=`work.html#lightbox`;
+    //     }
+    })
+}
 
 // cursor effect
 const cursorDiv = document.createElement('div');
