@@ -77,7 +77,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #101211;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -94,7 +94,8 @@ body {
   color: #f0f1f0;
   font-family: "microsoft jhenghei";
   overflow-x: hidden;
-  overflow-y: overlay;
+  overflow-y: scroll;
+  cursor: none;
 }
 
 .container {
@@ -119,7 +120,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10;
   border-bottom: 2px solid #f0f1f0;
 }
 
@@ -154,7 +155,7 @@ body {
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
   text-align: center;
-  cursor: pointer;
+  cursor: none;
   opacity: 1;
 }
 .list li a.active {
@@ -183,7 +184,7 @@ body {
   width: 105px;
   padding: unset;
   margin: unset;
-  z-index: 10;
+  z-index: 1;
   background-color: #101211;
   -webkit-transform-origin: 50% 0%;
           transform-origin: 50% 0%;
@@ -197,7 +198,7 @@ body {
   padding: 10%;
   text-align: center;
   line-height: 24px;
-  cursor: pointer;
+  cursor: none;
 }
 .list .work ul li:hover {
   background-color: #f0f1f0;
@@ -225,6 +226,33 @@ body {
 .footer p {
   font-size: 18px;
   line-height: 30px;
+}
+
+.cursor {
+  width: 1%;
+  height: 0;
+  padding-bottom: 1%;
+  background-color: rgba(240, 241, 240, 0.7);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+}
+.cursor.active {
+  -webkit-animation: larger 0.2s ease forwards;
+          animation: larger 0.2s ease forwards;
+}
+@-webkit-keyframes larger {
+  to {
+    width: 2%;
+    padding-bottom: 2%;
+  }
+}
+@keyframes larger {
+  to {
+    width: 2%;
+    padding-bottom: 2%;
+  }
 }
 
 .main {
@@ -404,6 +432,7 @@ body {
   padding: 0% 2%;
   color: #f0f1f0;
   text-decoration: underline;
+  cursor: none;
 }
 
 .card {
@@ -429,7 +458,7 @@ body {
   overflow: hidden;
   -webkit-transform: translateY(250px);
           transform: translateY(250px);
-  cursor: pointer;
+  cursor: none;
 }
 .card li:hover .cardImg img {
   -webkit-transform: scale(1.1, 1.1);
@@ -446,7 +475,7 @@ body {
 .card li.locating {
   -webkit-transform: scale(2, 2);
           transform: scale(2, 2);
-  z-index: 10;
+  z-index: 1;
   opacity: 0;
 }
 .card li .cardImg {
@@ -545,7 +574,7 @@ body {
 .contact .contactContent i {
   font-size: 30px;
   margin-left: 15px;
-  cursor: pointer;
+  cursor: none;
 }
 
 .about > div, .about > img, .contact > img, .contact > div {
@@ -580,6 +609,9 @@ body {
           align-items: center;
   width: 100%;
   padding: 50px 0px;
+  opacity: 0;
+  -webkit-animation: refresh 1s 0.5s ease forwards;
+          animation: refresh 1s 0.5s ease forwards;
 }
 .btnGroup form {
   display: -webkit-box;
@@ -602,7 +634,7 @@ body {
   color: #f0f1f0;
   border-radius: 2%;
   border: 2px solid #f0f1f0;
-  cursor: pointer;
+  cursor: none;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
@@ -627,12 +659,15 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 50px;
+  -webkit-animation: refresh 1s ease forwards;
+          animation: refresh 1s ease forwards;
 }
 .workCard li {
-  cursor: pointer;
+  cursor: none;
   border-radius: 1%;
-  overflow: hidden;
   width: 33%;
+  overflow: hidden;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
   position: relative;
@@ -641,7 +676,7 @@ body {
   display: none;
 }
 .workCard li:hover {
-  z-index: 10;
+  z-index: 1;
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
 }
@@ -673,4 +708,146 @@ body {
           transform: translate(0%, 80%);
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
+}
+
+@-webkit-keyframes refresh {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(2, 2);
+            transform: scale(2, 2);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes refresh {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(2, 2);
+            transform: scale(2, 2);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+.lightbox {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(16, 18, 17, 0);
+  z-index: -1;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  opacity: 0;
+  cursor: none;
+}
+.lightbox:target {
+  z-index: 1000;
+  background-color: rgba(16, 18, 17, 0.7);
+  opacity: 1;
+}
+
+.lightboxContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  height: 90%;
+  background-color: #101211;
+  color: #f0f1f0;
+  border: 2px solid #f0f1f0;
+  border-radius: 1%;
+  overflow: hidden;
+}
+.lightboxContent .lightboxImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+  height: 100%;
+}
+.lightboxContent .lightboxImg img {
+  width: 50%;
+  height: 25%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: none;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+.lightboxContent .lightboxImg img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+.lightboxContent .lightboxText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  height: 100%;
+  padding: 3% 2%;
+  overflow-y: scroll;
+}
+.lightboxContent .lightboxText h3 {
+  width: 100%;
+  font-size: 28px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f1f0;
+}
+.lightboxContent .lightboxText span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.lightboxContent .lightboxText p {
+  font-size: 18px;
+  line-height: 30px;
 }

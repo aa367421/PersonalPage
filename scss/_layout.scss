@@ -3,7 +3,7 @@
 }
 
 ::-webkit-scrollbar-track{
-    background-color: $theme-color-dark;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -20,7 +20,8 @@ body{
     color: $theme-color-light;
     font-family: "microsoft jhenghei";
     overflow-x: hidden;
-    overflow-y: overlay;
+    overflow-y: scroll;
+    cursor: none;
 }
 
 .container{
@@ -38,7 +39,7 @@ body{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 100;
+    z-index: 10;
     border-bottom: 2px solid $theme-color-light;
 }
 
@@ -61,7 +62,7 @@ body{
         // white-space: nowrap;
         transition: 1s ease all;
         text-align: center;
-        cursor: pointer;
+        cursor: none;
         opacity: 1;
         &.active{
             opacity: 0.7;
@@ -90,7 +91,7 @@ body{
             width: 105px;
             padding: unset;
             margin: unset;
-            z-index: 10;
+            z-index: 1;
             background-color: $theme-color-dark;
             transform-origin: 50% 0%;
             transform: scale(1, 0);
@@ -101,7 +102,7 @@ body{
                 text-align: center;
                 line-height: 24px;
                 // text-align: center;
-                cursor: pointer;
+                cursor: none;
                 &:hover{
                     background-color: $theme-color-light;
                     color: $theme-color-dark;
@@ -124,5 +125,25 @@ body{
     p{
         font-size: 18px;
         line-height: 30px;
+    }
+}
+
+.cursor{
+    width: 1%;
+    height: 0;
+    padding-bottom: 1%;
+    background-color: rgba($theme-color-light, $alpha: 0.7);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    &.active{
+        animation: larger 0.2s ease forwards;
+    }
+    @keyframes larger {
+        to{
+            width: 2%;
+            padding-bottom: 2%;
+        }
     }
 }
