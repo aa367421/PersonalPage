@@ -135,7 +135,7 @@ body{
     background-color: rgba($theme-color-light, $alpha: 0.7);
     border-radius: 50%;
     position: fixed;
-    z-index: 9999;
+    z-index: 99999;
     pointer-events: none;
     &.active{
         animation: larger 0.2s ease forwards;

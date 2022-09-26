@@ -1,0 +1,35 @@
+.aboutPage{
+    @include flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 100%;
+    .aboutPageContent{
+        @include flex;
+        width: 80%;
+        background-color: #000;
+        .imgAndQuote{
+            @include flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 40%;
+            background-color: red;
+            *{
+                width: 100%;
+            }
+            img{
+                width: 50%;
+            }
+        }
+        .experience{
+            @include flex(center, flex-start);
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 60%;
+            background-color: blue;
+            *{
+                width: 100%;
+            }
+        }
+    }
+}
