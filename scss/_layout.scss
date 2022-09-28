@@ -113,14 +113,14 @@ body{
 }
 
 .footer{
+    @include flex;
     height: 200px;
-    @include flex();
-
     border-top: 2px solid $theme-color-light;
+    padding-top: 50px;
     .footerImg{
         width: 180px;
         height: 180px;
-        margin-right: 100px;
+        margin-right: 5%;
     }
     p{
         font-size: 18px;

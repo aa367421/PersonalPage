@@ -29,7 +29,7 @@ buttonGroup.addEventListener('click', (e) => {
         workCards.forEach(item => {
             item.classList.remove('unseen');
         })
-        // toggle class
+        // toggle btn class
         if (!e.target.classList.contains('active')){
             let ary = Array.from(btns);
             ary.forEach(item => {
@@ -145,13 +145,3 @@ const checkWork = () => {
 }
 
 checkWork();
-
-
-// let images = [];
-// let preload = (arguments) => {
-//     for (let i=0; i< arguments.length; i++){
-//         images[i] = new Image();
-//         images[i].src = arguments[i];
-//     }
-//     console.log('hi');
-// }

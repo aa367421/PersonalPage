@@ -17,7 +17,7 @@
     @include flex(flex-start,center);
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     animation: refresh 1s ease forwards;
     li{
         @include flex;
@@ -31,9 +31,6 @@
         background-color: #000;
         img{
             object-fit: cover;
-        }
-        &.unseen{
-            display: none;
         }
         &:hover{
             z-index: 1;
@@ -123,6 +120,7 @@
         h3{
             width: 100%;
             font-size: $titleSize;
+            line-height: 40px;
             padding-bottom: 20px;
             margin-bottom: 30px;
             border-bottom: 2px solid $theme-color-light;
@@ -162,4 +160,8 @@
         background-color: rgba($theme-color-dark, $alpha: 0.7);
         opacity: 1;
     }
+}
+
+.unseen{
+    display: none !important;
 }

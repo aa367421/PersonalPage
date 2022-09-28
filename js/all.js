@@ -31,13 +31,22 @@ $(document).ready(function(){
 
         e.preventDefault();
         let target, t;
+        let now = '';
 
         if (e.target.nodeName != 'A'){
             target = '#work';
             now = e.target.dataset.now;
         } else {
             target = $(this).attr('href');
-            now = '';
+
+            let map = ['?now=theater', '?now=frontend', '?now=other']
+            let getRandom = (x) => {
+                return Math.floor(Math.random()*x);
+            }
+
+            if (target == '#work'){
+                now = map[getRandom(3)];
+            }
         }
 
         t = target.split('#'); 
@@ -82,7 +91,7 @@ if (cardList !== null){
     // Scroll
     let card = document.querySelectorAll('.card li');
     let about = document.querySelectorAll('.aboutContent, .about>img');
-    let contact = document.querySelectorAll('.contact>img, .contactContent')
+    let contact = document.querySelectorAll('.contactImg, .contactContent')
     let homeTitle = document.querySelectorAll('.title');
     let [workTitle, aboutTitle, contactTitle] = homeTitle;
     let homeStatus = {
@@ -137,7 +146,7 @@ let forEvent;
 const move = () => {
     cursorDiv.style.left = `${forEvent.x - cursorDiv.offsetWidth /2}px`;
     cursorDiv.style.top = `${forEvent.y - cursorDiv.offsetHeight /2}px`;
-    if (forEvent.target.closest('h2 a, li, button')){
+    if (forEvent.target.closest('h2 a, li, button, i')){
         if (!cursorDiv.classList.contains('active')){
             cursorDiv.classList.add('active');
         } else {
@@ -178,6 +187,12 @@ request.onload = () => {
     el.crossorigin = "anonymous";
     document.body.appendChild(el);
 
+    el.as = "script";
+    el.rel = "prefetch";
+    el.href = "./js/about.js"; 
+    el.crossorigin = "anonymous";
+    document.body.appendChild(el);
+
     let preload = (src, rel, as) => {
         for (let i=0; i< src.length; i++){
             let el = document.createElement('link');
@@ -210,6 +225,13 @@ request.onload = () => {
         el.defer = true;
         document.body.appendChild(el);
     }
+    if (nowPage[0].slice(-5) == 'about'){
+        el = document.createElement('script');
+        el.src = "./js/about.js";
+        el.defer = true;
+        document.body.appendChild(el);
+    }
+
     preload(preloadImages, 'prefetch', 'image');
     preload(preloadVideos, 'prefetch', 'document');
 }

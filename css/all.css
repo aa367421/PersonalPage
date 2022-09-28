@@ -206,7 +206,6 @@ body {
 }
 
 .footer {
-  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,12 +215,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 200px;
   border-top: 2px solid #f0f1f0;
+  padding-top: 50px;
 }
 .footer .footerImg {
   width: 180px;
   height: 180px;
-  margin-right: 100px;
+  margin-right: 5%;
 }
 .footer p {
   font-size: 18px;
@@ -445,7 +446,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .card li {
   position: relative;
@@ -531,6 +532,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 50px;
 }
 .about .aboutContent {
   margin-right: 50px;
@@ -556,34 +558,46 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: right;
   margin-bottom: 100px;
+  width: 100%;
+  padding: 0px 20%;
 }
-.contact img {
-  width: 25%;
-  margin-right: 50px;
+.contact .contactImg {
+  width: 50%;
+}
+.contact .contactImg img {
+  width: 80%;
 }
 .contact .contactContent {
-  position: relative;
+  width: 50%;
 }
 .contact .contactContent p {
   text-align: left;
   line-height: 30px;
+  margin-left: 10%;
   margin-bottom: 10px;
 }
-.contact .contactContent i {
-  font-size: 30px;
-  margin-left: 15px;
+.contact .contactContent .contactContent {
+  width: 50%;
+  text-align: right;
+}
+.contact .contactContent .contactContent a {
+  display: inline;
+  color: unset;
   cursor: none;
 }
+.contact .contactContent .contactContent a i {
+  font-size: 30px;
+  margin-left: 15px;
+}
 
-.about > div, .about > img, .contact > img, .contact > div {
+.about > div, .about > img, .contact > div {
   -webkit-transform: translateY(250px);
           transform: translateY(250px);
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
 }
-.about > div.active, .about > img.active, .contact > img.active, .contact > div.active {
+.about > div.active, .about > img.active, .contact > div.active {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
@@ -660,7 +674,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   -webkit-animation: refresh 1s ease forwards;
           animation: refresh 1s ease forwards;
 }
@@ -687,9 +701,6 @@ body {
 .workCard li img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-.workCard li.unseen {
-  display: none;
 }
 .workCard li:hover {
   z-index: 1;
@@ -844,6 +855,7 @@ body {
 .lightboxContent .lightboxText h3 {
   width: 100%;
   font-size: 28px;
+  line-height: 40px;
   padding-bottom: 20px;
   margin-bottom: 30px;
   border-bottom: 2px solid #f0f1f0;
@@ -901,6 +913,10 @@ body {
   opacity: 1;
 }
 
+.unseen {
+  display: none !important;
+}
+
 .aboutPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -917,8 +933,12 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #fff;
   width: 100%;
+  padding-top: 50px;
+}
+.aboutPage .btnGroup {
+  padding: unset;
+  margin-bottom: 30px;
 }
 .aboutPage .aboutPageContent {
   display: -webkit-box;
@@ -931,9 +951,32 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
-  background-color: #000;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .aboutPage .aboutPageContent .imgAndQuote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  padding: 0px 20px 40px 20px;
+  margin-bottom: 40px;
+  border-bottom: 5px solid #f0f1f0;
+}
+.aboutPage .aboutPageContent .imgAndQuote * {
+  width: 100%;
+  line-height: 30px;
+}
+.aboutPage .aboutPageContent .imgAndQuote img {
+  width: 25%;
+}
+.aboutPage .aboutPageContent .imgAndQuote .quote {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -943,20 +986,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 40%;
-  background-color: red;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
 }
-.aboutPage .aboutPageContent .imgAndQuote * {
+.aboutPage .aboutPageContent .imgAndQuote .quote * {
   width: 100%;
 }
-.aboutPage .aboutPageContent .imgAndQuote img {
-  width: 50%;
+.aboutPage .aboutPageContent .imgAndQuote .quote h1 {
+  font-size: 28px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.aboutPage .aboutPageContent .imgAndQuote .quote span {
+  margin-bottom: 20px;
+}
+.aboutPage .aboutPageContent .imgAndQuote .quote p {
+  font-size: 18px;
 }
 .aboutPage .aboutPageContent .experience {
   display: -webkit-box;
@@ -968,15 +1016,93 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 60%;
-  background-color: blue;
+  padding: 0px 20px;
 }
-.aboutPage .aboutPageContent .experience * {
+.aboutPage .aboutPageContent .experience div {
+  font-size: 18px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.aboutPage .aboutPageContent .experience div * {
+  display: block;
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+.aboutPage .aboutPageContent .experience div *.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+.aboutPage .aboutPageContent .experience div h3 {
+  font-size: 24px;
+  line-height: 50px;
+}
+.aboutPage .aboutPageContent .experience div span {
+  padding-left: 50px;
+  line-height: 40px;
+}
+
+.contactPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  padding: 100px 50px;
+}
+.contactPage .contactImg {
+  width: 50%;
+  text-align: center;
+}
+.contactPage .contactImg img {
+  width: 50%;
+}
+.contactPage .contactContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  padding-left: 5%;
+}
+.contactPage .contactContent h1 {
+  font-size: 28px;
+  line-height: 50px;
+}
+.contactPage .contactContent p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.contactPage .contactContent .icon {
   width: 100%;
+  font-size: 36px;
+}
+.contactPage .contactContent .icon a {
+  display: inline;
+  color: unset;
+  cursor: none;
+}
+.contactPage .contactContent .icon a i {
+  margin-right: 3%;
 }

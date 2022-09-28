@@ -1,0 +1,39 @@
+.contactPage{
+    @include flex(center,center);
+    width: 60%;
+    padding: 100px 50px;
+    .contactImg{
+        width: 50%;
+        text-align: center;
+        img{
+            width: 50%;
+        }
+    }
+    .contactContent{
+        @include flex(center, flex-start);
+        flex-direction: column;
+        width: 50%;
+        padding-left: 5%;
+        h1{
+            font-size: $titleSize;
+            line-height: 50px;
+        }
+        p{
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+        .icon{
+            width: 100%;
+            font-size: 36px;
+            a{
+                display: inline;
+                color: unset;
+                cursor: none;
+                i{
+                    margin-right: 3%;
+                }
+            }
+        }
+    }
+}

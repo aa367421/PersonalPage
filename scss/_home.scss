@@ -152,7 +152,7 @@
 .card{
     @include flex(space-evenly);
     // background-color: #FFF;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     li{
         position: relative;
         width: 30%;
@@ -224,6 +224,7 @@
 
 .about{
     @include flex;
+    margin-bottom: 50px;
     .aboutContent{
         margin-right: 50px;
         h1{
@@ -241,28 +242,41 @@
 
 .contact{
     @include flex;
-    text-align: right;
     margin-bottom: 100px;
-    img{
-        width: 25%;
-        margin-right: 50px;
+    width: 100%;
+    padding: 0px 20%;
+    
+    .contactImg{
+        width: 50%;
+        img{
+            width: 80%;
+        }
     }
     .contactContent{
-        position: relative;
+        width: 50%;
         p{
             text-align: left;
             line-height: 30px;
-            margin-bottom: 10px; 
+            margin-left: 10%;
+            margin-bottom: 10px;
         }
-        i{
-            font-size: 30px;
-            margin-left: 15px;
-            cursor: none;
+        .contactContent{
+            width: 50%;
+            text-align: right;
+            a{
+                display: inline;
+                color: unset;
+                cursor: none;
+                i{
+                    font-size: 30px;
+                    margin-left: 15px;
+                }   
+            }
         }
     }
 }
 
-.about>div, .about>img, .contact>img, .contact>div{
+.about>div, .about>img, .contact>div{
     transform: translateY(250px);
     transition: 1s ease all;
     &.active{

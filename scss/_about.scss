@@ -2,33 +2,76 @@
     @include flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #fff;
     width: 100%;
+    padding-top: 50px;
+    .btnGroup{
+        padding: unset;
+        margin-bottom: 30px;
+    }
     .aboutPageContent{
         @include flex;
         width: 80%;
-        background-color: #000;
+        flex-wrap: wrap;
         .imgAndQuote{
-            @include flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 40%;
-            background-color: red;
+            @include flex(space-between,center);
+            width: 60%;
+            padding: 0px 20px 40px 20px;
+            margin-bottom: 40px;
+            border-bottom: 5px solid $theme-color-light;
             *{
                 width: 100%;
+                line-height: 30px;
             }
             img{
-                width: 50%;
+                width: 25%;
+            }
+            .quote{
+                @include flex;
+                flex-direction: column;
+
+                width: 60%;
+                *{
+                    width: 100%;
+                }
+                h1{
+                    font-size: $titleSize;
+                    line-height: 50px;
+                    margin-bottom: 20px;
+                }
+                span{
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-size: 18px;
+                }
             }
         }
         .experience{
             @include flex(center, flex-start);
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
             width: 60%;
-            background-color: blue;
-            *{
-                width: 100%;
+            padding: 0px 20px;
+            div{
+                // padding-left: 50px;
+                font-size: 18px;
+                margin-bottom: 50px;
+                overflow: hidden;
+                *{
+                    display: block;
+                    transform: translateX(-150%);
+                    transition: 0.5s ease all;
+                    &.active{
+                        transform: translateX(0%);
+                    }
+                }
+                h3{
+                    font-size: $contentSize;
+                    line-height: 50px;
+                }
+                span{
+                    padding-left: 50px;
+                    line-height: 40px;
+                }
             }
         }
     }

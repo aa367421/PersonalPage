@@ -8,9 +8,9 @@
         "imgAmount": "8",
         "video": "",
         "description": {
-            "title": "麥高芬劇團2020年冬季公演<br>《犀牛》",
+            "title": "麥高芬劇團2020冬季公演<br>《犀牛》",
             "job": "表導組　演員——飾　白朗傑",
-            "during": "2020/09 - 2020/12",
+            "during": "2020.09 - 2020.12",
             "content": "我是內文"
         }
     },
@@ -23,9 +23,9 @@
         "imgAmount": "4",
         "video": "https://www.youtube.com/embed/-s_sMnfTJ1w",
         "description": {
-            "title": "程式設計基礎期末專案<br>《拯救世界大作戰》",
+            "title": "程式設計基礎課程專案<br>《拯救世界大作戰》",
             "job": "",
-            "during": "2021/01",
+            "during": "2021.01",
             "content": "我是內文"
         }
     },
@@ -38,9 +38,9 @@
         "imgAmount": "8",
         "video": "",
         "description": {
-            "title": "麥高芬劇團2021年夏季公演<br>《寂寞芳心俱樂部》",
+            "title": "麥高芬劇團2021夏季公演<br>《寂寞芳心俱樂部》",
             "job": "燈光組　組員",
-            "during": "2021/03 - 2021/06",
+            "during": "2021.03 - 2021.06",
             "content": "我是內文"
         }
     },
@@ -49,13 +49,13 @@
         "root": "gogotong",
         "type": "frontend",
         "typeText": "《小桶向前進》",
-        "objectFit": "cover",
+        "objectFit": "contain",
         "imgAmount": "4",
         "video": "https://www.youtube.com/embed/6VxihFo_dJU",
         "description": {
-            "title": "Web程式設計期末專案<br>《小桶向前進》",
+            "title": "Web程式設計課程專案<br>《小桶向前進》",
             "job": "",
-            "during": "2021/05 - 2021/06",
+            "during": "2021.05 - 2021.06",
             "content": "我是內文"
         }
     },
@@ -64,13 +64,13 @@
         "root": "mcorder",
         "type": "frontend",
         "typeText": "《麥點餐》",
-        "objectFit": "cover",
+        "objectFit": "contain",
         "imgAmount": "3",
         "video": "",
         "description": {
             "title": "劇場點餐 Side Project<br>《麥點餐》",
             "job": "",
-            "during": "2021/08",
+            "during": "2021.08",
             "content": "我是內文"
         }
     },
@@ -83,9 +83,9 @@
         "imgAmount": "8",
         "video": "",
         "description": {
-            "title": "麥高芬劇團2021年冬季公演<br>《變身怪醫》",
+            "title": "麥高芬劇團2021冬季公演<br>《變身怪醫》",
             "job": "燈光組　組長",
-            "during": "2021/09 - 2021/12",
+            "during": "2021.09 - 2021.12",
             "content": "我是內文"
         }
     },
@@ -94,13 +94,13 @@
         "root": "xmascorp",
         "type": "other",
         "typeText": "《X'mas Corp.》",
-        "objectFit": "cover",
+        "objectFit": "contain",
         "imgAmount": "4",
         "video": "https://www.youtube.com/embed/KiuOmw9pcvs",
         "description": {
-            "title": "3D遊戲設計期末專案<br>《X'mas Corp.》",
+            "title": "3D遊戲設計課程專案<br>《X'mas Corp.》",
             "job": "API串接、UI實踐",
-            "during": "2021/09 - 2021/01",
+            "during": "2021.09 - 2022.01",
             "content": "我是內文"
         }
     },
@@ -113,9 +113,9 @@
         "imgAmount": "8",
         "video": "",
         "description": {
-            "title": "麥高芬劇團2022年夏季公演<br>《文明的野蠻人》",
+            "title": "麥高芬劇團2022夏季公演<br>《文明的野蠻人》",
             "job": "表導組　舞台監督",
-            "during": "2022/03 - 2022/06",
+            "during": "2022.03 - 2022.06",
             "content": "我是內文"
         }
     },
@@ -124,18 +124,33 @@
         "root": "catschool",
         "type": "other",
         "typeText": "《貓學堂》",
-        "objectFit": "cover",
+        "objectFit": "contain",
         "imgAmount": "4",
         "video": "",
         "description": {
-            "title": "人機互動設計期末專案<br>《貓學堂》",
+            "title": "人機互動設計課程專案<br>《貓學堂》",
             "job": "UX優化、使用者訪談",
-            "during": "2022/03 - 2022/06",
+            "during": "2022.03 - 2022.06",
             "content": "我是內文"
         }
     },
     {
         "index": "9",
+        "root": "dream",
+        "type": "other",
+        "typeText": "《夢》",
+        "objectFit": "cover",
+        "imgAmount": "4",
+        "video": "https://www.youtube.com/embed/BTnfeI9G_w8",
+        "description": {
+            "title": "虛擬實境藝術課程專案<br>《夢》",
+            "job": "",
+            "during": "2022.02 - 2022.08",
+            "content": "我是內文"
+        }
+    },
+    {
+        "index": "10",
         "root": "tillthenighistender",
         "type": "theater",
         "typeText": "《直到夜色溫柔》",
@@ -145,22 +160,22 @@
         "description": {
             "title": "2022臺北藝穗節<br>《直到夜色溫柔》",
             "job": "燈光組　組員",
-            "during": "2022/02 - 2022/08",
+            "during": "2022.02 - 2022.08",
             "content": "我是內文"
         }
     },
     {
-        "index": "10",
+        "index": "11",
         "root": "hexschool",
         "type": "frontend",
-        "typeText": "《六角學院線上培訓計畫》",
+        "typeText": "《六角學院線上實習培訓計畫》",
         "objectFit": "cover",
         "imgAmount": "8",
         "video": "",
         "description": {
-            "title": "《六角學院線上培訓計畫》",
+            "title": "《六角學院線上實習培訓計畫》",
             "job": "",
-            "during": "2022/07 - 2022/09",
+            "during": "2022.07 - 2022.09",
             "content": "我是內文"
         }
     }

@@ -27,9 +27,9 @@
                 <li class="work">
                     <a href="#work">作品</a>
                     <ul>
-                        <li>劇場</li>
-                        <li>劇場</li>
-                        <li>劇場</li>
+                        <li data-now="?now=theater">劇場</li>
+                        <li data-now="?now=frontend">前端</li>
+                        <li data-now="?now=other">其他</li>
                     </ul>
                 </li>
                 <li><a href="#banner">首頁</a></li>
@@ -37,23 +37,78 @@
         </div>
         <div class="main">
             <div class="aboutPage">
-                <div class="btnGroup">
-                    <form>
-                        <button type="submit" value="theater" name="now">劇場</button>
-                        <button type="submit" value="frontend" name="now">前端</button>
-                        <button type="submit" value="other" name="now">其他</button>
-                    </form>
-                </div>
                 <div class="aboutPageContent">
                     <div class="imgAndQuote">
-                        <img src="./img/FooterPhoto.png" alt="">
-                        <h1>李文哲</h1>
-                        <span>國立政治大學</span>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, enim!</p>
+                        <img src="./img/ProfilePicture.png" alt="">
+                        <div class="quote">
+                            <h1>李文哲　Wen Che Li</h1>
+                            <span>
+                                國立政治大學中文系／雙主修數位內容學士學位學程　在學中<br>
+                                政大傳播學院劇場正式助理
+                            </span>
+                            <p>
+                                喜歡挑戰不同領域、擴展舒適圈，擅長揉合感性與理性，以多種角度切入、解決問題。
+                                在燈光設計、前端工程、新媒體藝術、UI/UX設計等融合科技與美感的領域多方涉獵。<br><br>
+                                現況：在潮濕的台北文山區與雨抗戰、數位內容學程畢業製作努力中、北藝大劇場設計研究所備考中、前端框架學習中
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnGroup">
+                        <form>
+                            <button type="submit" value="theater" name="now">劇場</button>
+                            <button type="submit" value="frontend" name="now">前端</button>
+                            <button type="submit" value="other" name="now">其他</button>
+                        </form>
                     </div>
                     <div class="experience">
-                        <h3 class="aboutTitle">123</h3>
-                        <p>456</p>
+                        <div class="experienceContent">
+                            <h3 class="experienceTitle" data-type="theater frontend other">學習經歷：</h3>
+                            <span data-type="frontend">
+                                六角學院線上實習培訓計畫／2022.07 - 2022.09<br>
+                            </span>
+                            <span data-type="theater">
+                                臺中國家歌劇院　2022　NTT學苑劇場研究班／2022.07<br>
+                            </span>
+                            <span data-type="other">
+                                《夢》——虛擬實境藝術課程專案／2022.06<br>
+                            </span>
+                            <span data-type="other">
+                                《貓學堂》——人機互動設計課程專案／2022.03 - 2022.06<br>
+                            </span>
+                            <span data-type="other">
+                                《X'mas Corp.》——3D遊戲設計課程專案／2022.09 - 2022.01<br>
+                            </span>
+                            <span data-type="other">
+                                《小桶向前進》——Web程式設計課程專案／2021.05 - 2021.06<br>
+                            </span>
+                            <span data-type="other">
+                                《拯救世界大作戰》——程式設計基礎課程專案／2021.01<br>
+                            </span>
+                        </div>
+                        <div class="experienceContent">
+                            <h3 class="aboutTitle" data-type="theater">工作經歷：</h3>
+                            <span data-type="theater">
+                                場館館方助理——政大傳院劇場（麥高芬劇團）／2019.12 - 2022.06<br>
+                            </span>
+                        </div>
+                        <div class="experienceContent">
+                            <h3 class="aboutTitle" data-type="theater">活動經歷：</h3>
+                            <span data-type="theater">
+                                《直到夜色溫柔》——2022臺北藝穗節／2022.02 - 2022.08<br>
+                            </span>
+                            <span data-type="theater">
+                                《文明的野蠻人》——麥高芬劇團2022夏季公演／2022.03 - 2022.06<br>
+                            </span>
+                            <span data-type="theater">
+                                《變身怪醫》——麥高芬劇團2021冬季公演／2021.09 - 2021.12<br>
+                            </span>
+                            <span data-type="theater">
+                                《寂寞芳心俱樂部》——麥高芬劇團2021夏季公演／2021.03 - 2021.06<br>
+                            </span>
+                            <span data-type="theater">
+                                《犀牛》——麥高芬劇團2020冬季公演／2020.09 - 2020.12<br>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
