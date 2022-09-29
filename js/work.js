@@ -1,12 +1,11 @@
-let viewStatus = 'all';
-
-// workbtn
 const buttonGroup = document.querySelector('.btnGroup');
 const btns = document.querySelectorAll('.btnGroup form button');
 const workCardList = document.querySelector('.workCard');
 let workCards;
 
-const renderCard = (ary) => {
+let viewStatus = 'all';
+
+const renderAllCard = (ary) => {
     let str = "";
     ary.forEach((item) => {
         let {index, root, type, typeText} = item;
@@ -19,7 +18,7 @@ const renderCard = (ary) => {
     workCards = document.querySelectorAll('.workCard li');    
 }
 
-renderCard(ary);
+renderAllCard(ary);
 
 buttonGroup.addEventListener('click', (e) => {
     if (e.target.nodeName === "BUTTON"){
@@ -93,9 +92,9 @@ buttonGroup.addEventListener('click', (e) => {
         }
         str +=`</div></div>`
 
-        footer
         lightbox.innerHTML = str;
         lightbox.classList.add('active');
+
         if (objectFit == "contain"){
             document.querySelectorAll('.lightboxImg img').forEach(item => {
                 item.style.objectFit = "contain";
@@ -125,7 +124,7 @@ buttonGroup.addEventListener('click', (e) => {
                     }
                 }
             } else if (e.target.closest('i')){
-                return e.target;
+                return; // link outside
             } else {
                 lightbox.classList.remove('active');
             }

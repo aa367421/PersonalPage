@@ -180,32 +180,22 @@ request.onload = () => {
     res.forEach(item => {
         ary.unshift(item);
     })
-    let el = document.createElement('link');
-    el.as = "script";
-    el.rel = "prefetch";
-    el.href = "./js/work.js"; 
-    el.crossorigin = "anonymous";
-    document.body.appendChild(el);
 
-    el.as = "script";
-    el.rel = "prefetch";
-    el.href = "./js/about.js"; 
-    el.crossorigin = "anonymous";
-    document.body.appendChild(el);
-
-    let preload = (src, rel, as) => {
-        for (let i=0; i< src.length; i++){
-            let el = document.createElement('link');
-            el.rel = rel;
-            el.as = as;
-            el.crossorigin = "anonymous";
-            el.href = src[i];
-            document.body.appendChild(el);
-        }
+    let createPreloadEl = (as, href) => {
+        let el = document.createElement('link');
+        el.as = as;
+        el.rel = "prefetch";
+        el.href = href;
+        el.crossorigin = "anonymous";
+        document.body.appendChild(el);
     }
+
+    createPreloadEl("script", "./js/work.js");
+    createPreloadEl("script", "./js/about.js");
 
     let preloadImages = [];
     let preloadVideos = [];
+
     ary.forEach(item => {
         let {index, root, imgAmount} = item;
         for (let i=0;i<imgAmount;i++){
@@ -218,6 +208,7 @@ request.onload = () => {
             preloadVideos.push(video);
         }
     })
+
     let nowPage = location.href.split('.html');
     if (nowPage[0].slice(-4) == 'work'){
         el = document.createElement('script');
@@ -232,6 +223,11 @@ request.onload = () => {
         document.body.appendChild(el);
     }
 
-    preload(preloadImages, 'prefetch', 'image');
-    preload(preloadVideos, 'prefetch', 'document');
+    preloadImages.forEach(item => {
+        createPreloadEl("image", item);
+    })
+    preloadVideos.forEach(item => {
+        createPreloadEl('document', item);
+        console.log(item);
+    })
 }
