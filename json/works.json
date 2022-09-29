@@ -9,9 +9,10 @@
         "video": "",
         "description": {
             "title": "麥高芬劇團2020冬季公演<br>《犀牛》",
-            "job": "表導組　演員——飾　白朗傑",
+            "job": "表導組　演員<br>飾｜白朗傑",
             "during": "2020.09 - 2020.12",
-            "content": "我是內文"
+            "content": "「情況越來越失控了，越來越多人變成犀牛了！」<br><br>在一個郊區廣場上的露天咖啡廳，白朗傑和約翰一如往常談論著枯燥的日常話題，突然之間，一隻犀牛自人行道呼嘯而過。鎮上居民對此異象議論紛紛、爭論不休，包括咖啡店老闆、學者杜達，以及白朗傑的心上人黛西。<br><br>鎮上的犀牛數量與日俱增，愈來愈多人類頭上隨之長出犀牛角，而這次，輪到白朗傑身旁親近的好友。白朗傑面對淪陷的城鎮，以及讓他不知所措的荒謬狀況，陷入了前所未有的天人交戰⋯⋯<br><br>原著｜Eugène Ionesco<br>翻譯｜阮若缺<br>改編｜簡邦丞　周亮彤<br>導演｜簡邦丞　周亮彤",
+            "footer": ""
         }
     },
     {
@@ -24,9 +25,10 @@
         "video": "https://www.youtube.com/embed/-s_sMnfTJ1w",
         "description": {
             "title": "程式設計基礎課程專案<br>《拯救世界大作戰》",
-            "job": "",
+            "job": "單人創作",
             "during": "2021.01",
-            "content": "我是內文"
+            "content": "故事在遙遠的2077年之後，第六次世界大戰的同時，外星勢力趁人類內亂爭鬥不休，趁虛而入，人類節節敗退……<br><br>你是地球最後一位飛行員，背負著同袍、家人，與世界，你，踏進了太空飛船……<br><br>很像什麼３Ａ大作的開場，但其實只是小蜜蜂。",
+            "footer": "工具：Unity、C#、Sublime Text"
         }
     },
     {
@@ -41,7 +43,8 @@
             "title": "麥高芬劇團2021夏季公演<br>《寂寞芳心俱樂部》",
             "job": "燈光組　組員",
             "during": "2021.03 - 2021.06",
-            "content": "我是內文"
+            "content": "「跟別人談談自己的苦悶，是很重要的一種做人的需要。」<br><br>民國五十年代，丁家小妹美若殺夫未遂的新聞震驚社會，為了解決官司，內心深藏著不同難題的丁家三姊妹久別重逢。大姐美寶長期背負照顧重病爺爺的壓力，必須承受表妹素姬的冷嘲熱諷；回到眷村的二姐美威，在臺北追夢未果，又遇上舊情人華佗登門拜訪；而小妹美若則得面對破碎的婚姻和訴訟，身邊還只有年輕的律師少康能提供協助。丁家三姊妹究竟會如何度過這天？他們又該如何面對自己心中的感受……？<br><br>原著｜Beth Henley<br>翻譯｜陳培廣<br>改編｜陳培廣<br>導演｜陳政廷　林雅淳",
+            "footer": ""
         }
     },
     {
@@ -54,9 +57,10 @@
         "video": "https://www.youtube.com/embed/6VxihFo_dJU",
         "description": {
             "title": "Web程式設計課程專案<br>《小桶向前進》",
-            "job": "",
+            "job": "單人創作",
             "during": "2021.05 - 2021.06",
-            "content": "我是內文"
+            "content": "原先架構中，是含有討論區、遊戲，以及遊戲分數連動的排行榜與成就系統，最後因時間、技術的障礙而沒能完成 PHP、JS、HTML 之間的串接。<br><br>遊戲與討論區的運行可見影片，未上傳免空。",
+            "footer": "工具：HTML、CSS、JavaScript、PHP、MySQL、Sublime Text"
         }
     },
     {
@@ -71,7 +75,8 @@
             "title": "劇場點餐 Side Project<br>《麥點餐》",
             "job": "",
             "during": "2021.08",
-            "content": "我是內文"
+            "content": "在劇場實習時，大家因習慣而使用PTT推文點餐，負責人再以手動彙整。因內容不易整理、難以迅速查詢等原因，偶有漏訂、拿錯餐等狀況發生。<br><br>這項 Side project 以 PHP 與 MySQL 的方式完成資料串接與處理，同時實裝了計算餐點總數、總金額等功能。<br><br>惟 RWD 部分在當時仍有不熟悉之處，未能良好運用。後因學校免空程序繁瑣、後繼維護有困難而停止使用。",
+            "footer": "工具：HTML、CSS、PHP、MySQL、JavaScript、Sublime Text"
         }
     },
     {
@@ -86,7 +91,8 @@
             "title": "麥高芬劇團2021冬季公演<br>《變身怪醫》",
             "job": "燈光組　組長",
             "during": "2021.09 - 2021.12",
-            "content": "我是內文"
+            "content": "「實驗成功了！這是人類史上劃時代的發明。」<br><br>19世紀末、崇尚科技進步的英國，傑奇博士發明了能完美區分人類兩種人格的新藥。在發表會前一天，博士與機靈的助手普爾遇上不能被發現的麻煩，於是偷偷拉入三腳貓演員維克特，卻恰好被博士的未婚妻伊芙撞見。慾望、鬱忿、性格缺陷全部大解放，搞得一切天翻地覆！不過博士向大家保證，實驗非常成功，他也做足萬全的準備，發表會絕對能順順利利地進行⋯⋯不對，一定會露餡的吧！<br><br>劇本｜三谷幸喜《酒と涙とジキルとハイド》<br>授權公司｜SIS company inc.<br>特別感謝｜國家兩廳院<br>翻譯｜詹慕如 周若珍 林珮瑢<br>導演｜甘媄心 珊寧",
+            "footer": ""
         }
     },
     {
@@ -101,7 +107,8 @@
             "title": "3D遊戲設計課程專案<br>《X'mas Corp.》",
             "job": "API串接、UI實踐",
             "during": "2021.09 - 2022.01",
-            "content": "我是內文"
+            "content": "聖誕節前夕，聖誕老人的玩具倉庫陷入大火，要送給全世界小孩的禮物無依倖免，聖誕老人只好委託工廠，x'mas Corp.，要在24小時內將禮物通通做出來……<br><br>參考 OVERCOOK! 概念轉化而成，主要負責成績、換裝資訊的 API 串接，以及與美術之間的溝通、UI實踐。",
+            "footer": "工具：Unity、C#、Figma、illustrator"
         }
     },
     {
@@ -116,7 +123,8 @@
             "title": "麥高芬劇團2022夏季公演<br>《文明的野蠻人》",
             "job": "表導組　舞台監督",
             "during": "2022.03 - 2022.06",
-            "content": "我是內文"
+            "content": "「在十一月三日下午五點三十分，花園廣場，經過一番激烈的口角後，費迪，十一歲，武裝一根棍子，攻擊我們兒子，布諾，的臉龐⋯⋯」<br><br>胡利和瑞爾兩對夫婦，因孩子間的爭吵必須面對面溝通，試圖找出雙方都滿意的解決之道。四人誠意十足，以友善的姿態展開這場談話，希望能以成熟穩重的態度處理這件事。然而，這場看似理性的協商，隨對話推移逐漸失控，雙方言詞漸趨激動，時間的流逝也消磨了耐心，對話內容慢慢失焦，事情開始變得一發不可收拾⋯⋯<br><br>原著劇本｜Yasmina Reza《Le dieu du carnage》<br>代理授權｜株式会社シアターライツ<br>校正翻譯｜蔡佳勳<br>翻譯｜林雅淳 林珮瑢<br>導演｜林雅淳 林珮瑢<br>",
+            "footer": ""
         }
     },
     {
@@ -131,7 +139,8 @@
             "title": "人機互動設計課程專案<br>《貓學堂》",
             "job": "UX優化、使用者訪談",
             "during": "2022.03 - 2022.06",
-            "content": "我是內文"
+            "content": "我們自使用者研究出發，經歷了資料收集、訪問、用例整理、不同資訊架構的嘗試等不同的產品階段，在期末成功做出一個新的技能交換平台的原型，並完成初步的測試。<br><br>主要負責在前期的 UX 資料研究，以及訪談資料收集，以及 LOGO 字體設計。",
+            "footer": "工具：Figma"
         }
     },
     {
@@ -144,9 +153,10 @@
         "video": "https://www.youtube.com/embed/BTnfeI9G_w8",
         "description": {
             "title": "虛擬實境藝術課程專案<br>《夢》",
-            "job": "",
+            "job": "單人創作",
             "during": "2022.02 - 2022.08",
-            "content": "我是內文"
+            "content": "擷取了夢境的既視感、荒謬而有自成一格的邏輯等元素，以免費素材打造了這一場夢。<br><br>體驗中，對話框的內容會隨情境變化，同樣的門，同樣的城市，而又有著不同的視感。<br><br>門後，這次又會到哪裡呢？<br><br>後因疫情，期末展取消 VR 體驗，改為影片呈現。",
+            "footer": "工具：Unity、C#、blender、illustrator、Visual Studio Code"
         }
     },
     {
@@ -161,7 +171,8 @@
             "title": "2022臺北藝穗節<br>《直到夜色溫柔》",
             "job": "燈光組　組員",
             "during": "2022.02 - 2022.08",
-            "content": "我是內文"
+            "content": "「嗨～給約嗎？」<br><br>夜色中絢彩的霓虹燈管亮起，熟悉地進入昏黃房間，和形形色色的人纏綿、接吻、擁抱。被社會貼上的標籤開始散亂飛舞，僅憑本能驅動，最終回歸性與愛。而後人們各自散去，只剩夜色溫柔相伴⋯⋯<br><br>編　　劇｜簡莉穎<br>導　　演｜吳翊齊、陳政廷<br>舞台監督｜珊寧<br>燈光設計｜商婕瑜<br>音效設計｜林瓏<br>舞台設計｜魏妤珊<br>服化設計｜林雅淳<br>行銷統籌｜史菡葳<br>演　　員｜甘媄心、謝維元、王羿忻、吳冠緯",
+            "footer": ""
         }
     },
     {
@@ -176,7 +187,8 @@
             "title": "《六角學院線上實習培訓計畫》",
             "job": "",
             "during": "2022.07 - 2022.09",
-            "content": "我是內文"
+            "content": "以線上影片教學的方式學習前端相關技能，課程內容包含 HTML、CSS、jQery 以及隨後銜接的 JavaScript 以及 RWD 概念。<br><br>課程中共有五項作業，設計稿均由六角學院提供，連結如下。<br><br><a href='https://aa367421.github.io/HexSchoolHW1/' target='_blank'><i class='fa-brands fa-github'><span>　作業一：單頁式網站實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW2/' target='_blank'><i class='fa-brands fa-github'><span>　作業二：jQuery、燈箱、swiper實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW3/' target='_blank'><i class='fa-brands fa-github'><span>　作業三：多頁式網站實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW4/' target='_blank'><i class='fa-brands fa-github'><span>　作業四-1：JavaScript Todo List實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW4_API/' target='_blank'><i class='fa-brands fa-github'><span>　作業四-2：Todo List API 串接實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW5/' target='_blank'><i class='fa-brands fa-github'><span>　作業五：JavaScript 比價網 API 串接實作</span></i></a>",
+            "footer": "工具：HTML、CSS、JavaScript、Visual Studio Code"
         }
     }
 ]

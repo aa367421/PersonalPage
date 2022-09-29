@@ -86,7 +86,7 @@
 
 .lightboxContent{
     @include flex;
-    width: 60%;
+    width: 70%;
     height: 90%;
     background-color: $theme-color-dark;
     color: $theme-color-light;
@@ -96,7 +96,7 @@
     .lightboxImg{
         @include flex;
         flex-wrap: wrap;
-        width: 60%;
+        width: 55%;
         height: 100%;
         img{
             width: 50%;
@@ -113,9 +113,9 @@
     .lightboxText{
         @include flex(flex-start, flex-start);
         flex-direction: column;
-        width: 40%;
+        width: 45%;
         height: 100%;
-        padding: 3% 2%;
+        padding: 3% 2% 1.5% 2%;
         overflow-y: scroll;
         h3{
             width: 100%;
@@ -131,11 +131,29 @@
             margin-bottom: 30px;
             .job{
                 font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        .lightboxWorkDescription{
+            margin-bottom: 10%;
+            a{
+                color: unset;
+                cursor: none;
+                i{
+                    @include flex(flex-start,center);
+                    line-height: 42px;
+                    &::before{
+                        font-size: 30px;
+                    }
+                    span{
+                        font-family: 'microsoft jhenhei';
+                    }
+                }
             }
         }
         p{
             font-size: 18px;
-            line-height: 30px;
+            line-height: 42px;
         }
     }
 }
@@ -157,7 +175,7 @@
     }
     &.active{
         z-index: 10000;
-        background-color: rgba($theme-color-dark, $alpha: 0.7);
+        background-color: rgba($theme-color-dark, $alpha: 0.8);
         opacity: 1;
     }
 }

@@ -225,8 +225,12 @@
 .about{
     @include flex;
     margin-bottom: 50px;
+    padding-left: 10%;
+    img{
+        width: 25%;
+    }
     .aboutContent{
-        margin-right: 50px;
+        margin-left: 5%;
         h1{
             font-size: $contentSize;
             margin-bottom: 30px;
@@ -235,16 +239,13 @@
             line-height: 30px;
         }
     }
-    img{
-        width: 25%;
-    }
 }
 
 .contact{
     @include flex;
     margin-bottom: 100px;
     width: 100%;
-    padding: 0px 20%;
+    padding: 0px 10% 0% 25%;
     
     .contactImg{
         width: 50%;
@@ -253,23 +254,23 @@
         }
     }
     .contactContent{
-        width: 50%;
+        width: 40%;
         p{
             text-align: left;
             line-height: 30px;
-            margin-left: 10%;
+            margin-right: 10%;
             margin-bottom: 10px;
         }
         .contactContent{
             width: 50%;
-            text-align: right;
+            // text-align: right;
             a{
                 display: inline;
                 color: unset;
                 cursor: none;
                 i{
                     font-size: 30px;
-                    margin-left: 15px;
+                    margin-right: 15px;
                 }   
             }
         }

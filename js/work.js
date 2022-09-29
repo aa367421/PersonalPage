@@ -65,7 +65,7 @@ buttonGroup.addEventListener('click', (e) => {
             }
         })
         let {root, objectFit, imgAmount, video} = obj;
-        let {title, job, during, content} = obj.description;
+        let {title, job, during, content, footer} = obj.description;
         let imgRoot = `./img/workCard/${index}_${root}/`
         let lightbox = document.querySelector('.lightbox');
 
@@ -84,12 +84,16 @@ buttonGroup.addEventListener('click', (e) => {
                 <div class="jobAndDuring">
                 <span class="job">${job}</span>
                 <span>${during}</span>
-            </div>
-                <p>${content}</p>
-            </div>
-        </div`;
+            </div>`
+        if (footer != ""){
+            str += `<p class="lightboxWorkDescription">${content}</p>
+                <p class="lightboxFooter">${footer}</>`
+        } else {
+            str += `<p>${content}</p>`
+        }
+        str +=`</div></div>`
 
-        
+        footer
         lightbox.innerHTML = str;
         lightbox.classList.add('active');
         if (objectFit == "contain"){
@@ -99,6 +103,9 @@ buttonGroup.addEventListener('click', (e) => {
         }
 
         lightbox.addEventListener('click', (e) => {
+            if (e.target.closest('i')){
+                return;
+            }
             if (e.target.closest('.lightboxContent')){
                 e.preventDefault();
                 if (e.target.closest('img')){
@@ -117,6 +124,8 @@ buttonGroup.addEventListener('click', (e) => {
                         document.querySelector('.lightboxImgLarge img').style.objectFit = "contain";
                     }
                 }
+            } else if (e.target.closest('i')){
+                return e.target;
             } else {
                 lightbox.classList.remove('active');
             }

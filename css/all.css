@@ -533,9 +533,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 50px;
+  padding-left: 10%;
+}
+.about img {
+  width: 25%;
 }
 .about .aboutContent {
-  margin-right: 50px;
+  margin-left: 5%;
 }
 .about .aboutContent h1 {
   font-size: 24px;
@@ -543,9 +547,6 @@ body {
 }
 .about .aboutContent p {
   line-height: 30px;
-}
-.about img {
-  width: 25%;
 }
 
 .contact {
@@ -560,7 +561,7 @@ body {
           align-items: center;
   margin-bottom: 100px;
   width: 100%;
-  padding: 0px 20%;
+  padding: 0px 10% 0% 25%;
 }
 .contact .contactImg {
   width: 50%;
@@ -569,17 +570,16 @@ body {
   width: 80%;
 }
 .contact .contactContent {
-  width: 50%;
+  width: 40%;
 }
 .contact .contactContent p {
   text-align: left;
   line-height: 30px;
-  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 10px;
 }
 .contact .contactContent .contactContent {
   width: 50%;
-  text-align: right;
 }
 .contact .contactContent .contactContent a {
   display: inline;
@@ -588,7 +588,7 @@ body {
 }
 .contact .contactContent .contactContent a i {
   font-size: 30px;
-  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .about > div, .about > img, .contact > div {
@@ -796,7 +796,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60%;
+  width: 70%;
   height: 90%;
   background-color: #101211;
   color: #f0f1f0;
@@ -816,7 +816,7 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 60%;
+  width: 55%;
   height: 100%;
 }
 .lightboxContent .lightboxImg img {
@@ -847,9 +847,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 40%;
+  width: 45%;
   height: 100%;
-  padding: 3% 2%;
+  padding: 3% 2% 1.5% 2%;
   overflow-y: scroll;
 }
 .lightboxContent .lightboxText h3 {
@@ -875,10 +875,36 @@ body {
 }
 .lightboxContent .lightboxText .jobAndDuring .job {
   font-size: 18px;
+  line-height: 24px;
+}
+.lightboxContent .lightboxText .lightboxWorkDescription {
+  margin-bottom: 10%;
+}
+.lightboxContent .lightboxText .lightboxWorkDescription a {
+  color: unset;
+  cursor: none;
+}
+.lightboxContent .lightboxText .lightboxWorkDescription a i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 42px;
+}
+.lightboxContent .lightboxText .lightboxWorkDescription a i::before {
+  font-size: 30px;
+}
+.lightboxContent .lightboxText .lightboxWorkDescription a i span {
+  font-family: "microsoft jhenhei";
 }
 .lightboxContent .lightboxText p {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 42px;
 }
 
 .lightboxImgLarge {
@@ -909,7 +935,7 @@ body {
 }
 .lightboxImgLarge.active {
   z-index: 10000;
-  background-color: rgba(16, 18, 17, 0.7);
+  background-color: rgba(16, 18, 17, 0.8);
   opacity: 1;
 }
 
@@ -997,7 +1023,7 @@ body {
 }
 .aboutPage .aboutPageContent .imgAndQuote .quote h1 {
   font-size: 28px;
-  line-height: 50px;
+  line-height: 28px;
   margin-bottom: 20px;
 }
 .aboutPage .aboutPageContent .imgAndQuote .quote span {
