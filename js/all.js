@@ -104,7 +104,7 @@ $(document).ready(() => {
         }
         checkClickPos();
 
-        if (clickStatus.isClickWork == true){
+        if (clickStatus.isClickWork == true && device != 'pc'){
             return;
         }
 
