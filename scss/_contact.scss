@@ -1,7 +1,13 @@
 .contactPage{
     @include flex(center,center);
     width: 60%;
-    padding: 100px 50px;
+    padding: 7% 3%;
+    @include padHorizon {
+        width: 80%;
+    }
+    @include pad{
+        width: 100%;
+    }
     .contactImg{
         width: 50%;
         text-align: center;
@@ -17,15 +23,24 @@
         h1{
             font-size: $titleSize;
             line-height: 50px;
+            @include pad {
+                font-size: $largeSize;
+            }
         }
         p{
-            font-size: 20px;
+            font-size: $mediumSize;
             line-height: 30px;
             margin-bottom: 30px;
+            @include pad {
+                font-size: $smallSize;
+            }
         }
         .icon{
             width: 100%;
             font-size: 36px;
+            @include pad {
+                font-size: 30px;
+            }
             a{
                 display: inline;
                 color: unset;

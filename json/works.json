@@ -139,7 +139,7 @@
             "title": "人機互動設計課程專案<br>《貓學堂》",
             "job": "UX優化、使用者訪談",
             "during": "2022.03 - 2022.06",
-            "content": "我們自使用者研究出發，經歷了資料收集、訪問、用例整理、不同資訊架構的嘗試等不同的產品階段，在期末成功做出一個新的技能交換平台的原型，並完成初步的測試。<br><br>主要負責在前期的 UX 資料研究，以及訪談資料收集，以及 LOGO 字體設計。",
+            "content": "我們自使用者研究出發，經歷了資料收集、訪問、用例整理、不同資訊架構的嘗試等不同的產品階段，在期末成功做出一個新的技能交換平台的原型，並完成初步的測試。<br><br>主要負責在前期的 UX 資料研究，以及訪談資料收集，以及 LOGO 字體設計。<br><br><a href='https://www.figma.com/proto/TxAcgkZHfalGj76spVwCKi/%E8%B2%93%E5%AD%B8%E5%A0%82?node-id=6%3A297&scaling=scale-down&page-id=0%3A1&starting-point-node-id=6%3A297&show-proto-sidebar=1' target='_blank'><i class='fa-brands fa-figma'><span>　原型網址</span></i></a>",
             "footer": "工具：Figma"
         }
     },
@@ -156,7 +156,7 @@
             "job": "單人創作",
             "during": "2022.02 - 2022.08",
             "content": "擷取了夢境的既視感、荒謬而有自成一格的邏輯等元素，以免費素材打造了這一場夢。<br><br>體驗中，對話框的內容會隨情境變化，同樣的門，同樣的城市，而又有著不同的視感。<br><br>門後，這次又會到哪裡呢？<br><br>後因疫情，期末展取消 VR 體驗，改為影片呈現。",
-            "footer": "工具：Unity、C#、blender、illustrator、Visual Studio Code"
+            "footer": "工具：Unity、C#、blender、illustrator、After Effects、Visual Studio Code"
         }
     },
     {

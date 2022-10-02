@@ -24,6 +24,8 @@
     <meta property="og:img" content="https://aa367421.github.io/PersonalPage/img/FooterPhoto_Black.png">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="zh-Hant">
+    <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="./img/TitleIcon.ico" type="image/x-icon"/>
@@ -34,7 +36,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <ul class="list">
+            <ul class="headerList">
                 <li><a href="#contact">聯絡我</a></li>
                 <li><a href="#about">關於我</a></li>
                 <li class="work">
@@ -51,8 +53,10 @@
         <div class="main">
             <div class="home">
                 <div class="banner" id="banner">
-                    <img src="./img/Banner.png" alt="">
+                    <img src="./img/Banner.jpg" alt="" class="pc">
+                    <img src="./img/BannerSmall.jpg" alt="" class="mobile">
                     <div class="mask">
+                        <!-- <img src="./img/FooterPhoto.png" alt=""> -->
                         <svg>
                             <path class="Lstroke" d="M0 200 V 0 H 900"></path>
                             <path class="Rstroke" d="M900 0 V 200 H 0"></path>
@@ -93,20 +97,30 @@
                     <img src="./img/ProfilePicture.png" alt="">
                     <div class="aboutContent">
                         <h1>李文哲　Wen Che Li</h1>
-                        <p class="aboutText">
-                            國立政治大學中文系／雙主修數位內容學士學位學程　在學中<br>
+                        <p class="aboutText pc">
+                            國立政治大學中文系／雙主修數位內容學士學位學程<br>
                             政大傳播學院劇場正式助理<br><br>
                             喜歡挑戰不同領域、擴展舒適圈，擅長揉合感性與理性，以多種角度切入、解決問題<br>
                             在燈光設計、網頁前端、新媒體藝術、UI/UX設計等需要融合科技與美感的領域多方涉獵<br><br>
-                            現況：在潮濕的台北文山區與雨抗戰、數位內容學程畢業製作努力中、北藝大劇場設計研究所備考中、前端框架學習中
-                        </p>     
+                            在潮濕的台北文山區與雨抗戰，在數位內容學程畢業製作裡掙扎。北藝大劇場設計研究所備考中、前端框架學習中
+                        </p>
+                        <p class="aboutText pad">
+                            <span class="pad">國立政治大學中文系／雙主修數位內容學士學位學程<br>
+                            政大傳播學院劇場正式助理<br><br></span>
+                            <span class="mobile">國立政治大學中文系<br>
+                            雙主修數位內容學士學位學程<br>
+                            政大傳播學院劇場正式助理<br><br></span>
+                            喜歡挑戰不同領域、擴展舒適圈，擅長揉合感性與理性，以多種角度切入、解決問題。
+                            在燈光設計、網頁前端、新媒體藝術、UI/UX設計等需要融合科技與美感的領域多方涉獵。<br><br>
+                            在潮濕的台北文山區與雨抗戰，在數位內容學程畢業製作裡掙扎。北藝大劇場設計研究所備考中、前端框架學習中。
+                        </p> 
                     </div>
                 </div>
                 <h2 class="contactTitle title" id="contact"><a href="#contact">聯絡我</a></h2>
                 <div class="contact">
                     <div class="contactContent">
                         <p>Email：aa367421@gmail.com<br>電話：0983-619-290</p>
-                        <div class="contactContent">
+                        <div class="contactContentHref">
                             <a href="https://github.com/aa367421" target="_blank">
                                 <i class="fa-brands fa-github"></i>
                             </a>
@@ -123,6 +137,7 @@
                     </div>
                 </div>
             </div>
+            <i class="fa-solid fa-circle-arrow-up top"></i>
         </div>
         <div class="footer">
             <div class="footerImg">

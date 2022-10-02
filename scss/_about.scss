@@ -7,29 +7,57 @@
     .btnGroup{
         padding: unset;
         margin-bottom: 30px;
+        @include padHorizon {
+            form{
+                width: 50%;
+            }
+        }
+        @include pad {
+            form{
+                width: 60%;
+            }
+        }
     }
     .aboutPageContent{
         @include flex;
         width: 80%;
         flex-wrap: wrap;
+        @include padHorizon {
+            width: 100%;
+        }
         .imgAndQuote{
             @include flex(space-between,center);
             width: 60%;
             padding: 0px 20px 40px 20px;
             margin-bottom: 40px;
             border-bottom: 5px solid $theme-color-light;
+            @include padHorizon {
+                width: 80%;
+            }
+            @include pad {
+                @include flex(space-around,center);
+                flex-direction: column;
+                width: 95%;
+                padding: 0px 0px 40px 0px;
+            }
             *{
                 width: 100%;
                 line-height: 30px;
             }
             img{
                 width: 25%;
+                @include pad {
+                    width: 30%;
+                    margin-bottom: 20px;
+                }
             }
             .quote{
                 @include flex;
                 flex-direction: column;
-
                 width: 60%;
+                @include pad {
+                    width: 85%;
+                }
                 *{
                     width: 100%;
                 }
@@ -37,12 +65,19 @@
                     font-size: $titleSize;
                     line-height: 28px;
                     margin-bottom: 20px;
+                    @include pad {
+                        text-align: center;
+                        line-height: 36px;
+                    }
                 }
                 span{
                     margin-bottom: 20px;
+                    @include pad {
+                        text-align: center;
+                    }
                 }
                 p{
-                    font-size: 18px;
+                    font-size: $smallSize;
                 }
             }
         }
@@ -51,11 +86,22 @@
             flex-direction: column;
             width: 60%;
             padding: 0px 20px;
+            @include padHorizon {
+                width: 80%;
+                padding: 0px 10% 0px 15%;
+            }
+            @include pad {
+                width: 100%;
+                padding: 0px 5% 0px 10%;
+            }
             div{
                 // padding-left: 50px;
-                font-size: 18px;
+                font-size: $smallSize;
                 margin-bottom: 50px;
                 overflow: hidden;
+                @include padHorizon {
+                    margin-bottom: 5%;
+                }
                 *{
                     display: block;
                     transform: translateX(-150%);
@@ -65,8 +111,8 @@
                     }
                 }
                 h3{
-                    font-size: $contentSize;
-                    line-height: 50px;
+                    font-size: $largeSize;
+                    line-height: 50px;                    
                 }
                 span{
                     padding-left: 50px;

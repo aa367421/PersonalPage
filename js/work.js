@@ -5,7 +5,7 @@ let workCards;
 
 let viewStatus = 'all';
 
-const renderAllCard = (ary) => {
+let renderAllCards = (ary) => {
     let str = "";
     ary.forEach((item) => {
         let {index, root, type, typeText} = item;
@@ -18,27 +18,22 @@ const renderAllCard = (ary) => {
     workCards = document.querySelectorAll('.workCard li');    
 }
 
-renderAllCard(ary);
+renderAllCards(worksData);
 
 buttonGroup.addEventListener('click', (e) => {
     if (e.target.nodeName === "BUTTON"){
         e.preventDefault();
 
         // reset viewStatus
+        viewStatus = 'all';
         workCards.forEach(item => {
             item.classList.remove('unseen');
         })
+
         // toggle btn class
         if (!e.target.classList.contains('active')){
-            let ary = Array.from(btns);
-            ary.forEach(item => {
+            btns.forEach(item => {
                 item.classList.remove('active');
-            })
-
-            ary = ary.filter(item => {
-            if (item.classList.contains('active')){
-                return true;
-                }
             })
 
             // change viewStatus
@@ -56,26 +51,28 @@ buttonGroup.addEventListener('click', (e) => {
  workCardList.addEventListener('click', (e) => {
     if (e.target.closest('li')){
         let index = e.target.closest('li').dataset.index;
-        let obj = {};
-        ary.filter(item => {
+        let cardObj = {};
+        worksData.filter(item => {
             if (item.index == index){
-                obj = item;
+                cardObj = item;
                 return true;
             }
         })
-        let {root, objectFit, imgAmount, video} = obj;
-        let {title, job, during, content, footer} = obj.description;
-        let imgRoot = `./img/workCard/${index}_${root}/`
+
+        // get & render lightbox img
+        let {root, objectFit, imgAmount, video} = cardObj;
+        let {title, job, during, content, footer} = cardObj.description;
+        let imgRoot = `./img/workCard/${index}_${root}/`;
         let lightbox = document.querySelector('.lightbox');
 
         let str = `<div class="lightboxContent">
-        <div class="lightboxImg">`;
+        <div class="lightboxImg">`
 
         for (let i=0; i<imgAmount;i++){
             str += `<img src="${imgRoot}/img${i}.jpg" data-id="${i}">`
-        };
+        }
         if (video != ""){
-            str += `<iframe width="100%" height="50%" src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+            str += `<iframe src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         }
         str += `</div>
             <div class="lightboxText">
@@ -95,6 +92,29 @@ buttonGroup.addEventListener('click', (e) => {
         lightbox.innerHTML = str;
         lightbox.classList.add('active');
 
+        let lightboxStatus = {
+            "lightbox": false,
+            "lightboxImgLarge": false
+        }
+
+
+        let closeLightboxByEsc = (e) => {
+            if (e.key == "Escape"){
+                if (lightboxStatus.lightboxImgLarge == true){
+                    lightboxStatus.lightboxImgLarge = false;
+                    document.querySelector('.lightboxImgLarge').classList.remove('active');
+                } else {
+                    lightboxStatus.lightbox = false;
+                    lightbox.classList.remove('active');
+                    document.removeEventListener('keydown', closeLightboxByEsc, false);
+                }
+            } else {
+                return;
+            }
+        }
+
+        document.addEventListener('keydown', closeLightboxByEsc, false);
+
         if (objectFit == "contain"){
             document.querySelectorAll('.lightboxImg img').forEach(item => {
                 item.style.objectFit = "contain";
@@ -102,49 +122,61 @@ buttonGroup.addEventListener('click', (e) => {
         }
 
         lightbox.addEventListener('click', (e) => {
+            lightboxStatus.lightboxImgLarge = true;
+
             if (e.target.closest('i')){
                 return;
             }
             if (e.target.closest('.lightboxContent')){
                 e.preventDefault();
                 if (e.target.closest('img')){
+                    lightboxStatus.lightbox = true;
+
                     let id = e.target.closest('img').dataset.id;
                     let lightboxImgLarge = document.querySelector('.lightboxImgLarge');
-                    lightboxImgLarge.addEventListener('click', (e) => {
-                        if (e.target.closest('img')){
-                            e.preventDefault();
-                        } else {
-                            lightboxImgLarge.classList.remove('active');
-                        }
-                    })
+
+                    // get & render lightbox Large img
                     lightboxImgLarge.classList.add('active');
                     lightboxImgLarge.innerHTML = `<img src="${imgRoot}/img${id}.jpg" alt="">`;
                     if (objectFit == "contain"){
                         document.querySelector('.lightboxImgLarge img').style.objectFit = "contain";
                     }
+
+                    lightboxImgLarge.addEventListener('click', (e) => {
+                        if (e.target.closest('img')){
+                            e.preventDefault();
+                        } else {
+                            lightboxStatus.lightboxImgLarge = false;
+                            lightboxImgLarge.classList.remove('active');
+                        }
+                    })
                 }
             } else if (e.target.closest('i')){
                 return; // link outside
             } else {
+                lightboxStatus.lightbox = false;
                 lightbox.classList.remove('active');
+                document.removeEventListener('keydown', closeLightboxByEsc, false);
             }
         })
     }
 })
 
-const checkWork = () => {
+const checkWorkHref = () => {
     let url = new URL(location.href);
-    let now = url.searchParams.get('now');
-    if (now !== null){
-        viewStatus = now;
-        workCards.forEach(item => {
-            if (item.dataset.type !== viewStatus){
-                item.classList.add('unseen');
-            }
-        })
+    let urlNow = url.searchParams.get('now');
+    if (urlNow !== null){
+        viewStatus = urlNow;
+
         btns.forEach(item => {
             if(item.value === viewStatus){
                 item.classList.add('active');
+            }
+        })
+        
+        workCards.forEach(item => {
+            if (item.dataset.type !== viewStatus){
+                item.classList.add('unseen');
             }
         })
     } else {
@@ -152,4 +184,4 @@ const checkWork = () => {
     }
 }
 
-checkWork();
+checkWorkHref();

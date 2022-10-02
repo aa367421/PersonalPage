@@ -14,6 +14,7 @@ buttonGroup.addEventListener('click', (e) => {
         e.preventDefault();
 
         // reset viewStatus
+        viewStatus = 'all';
         expList.forEach(item => {
             item.classList.remove('active');
             item.classList.remove('unseen');
@@ -23,15 +24,8 @@ buttonGroup.addEventListener('click', (e) => {
         })
         // toggle btn class
         if (!e.target.classList.contains('active')){
-            let ary = Array.from(btns);
-            ary.forEach(item => {
+            btns.forEach(item => {
                 item.classList.remove('active');
-            })
-
-            ary = ary.filter(item => {
-            if (item.classList.contains('active')){
-                return true;
-                }
             })
 
             // change viewStatus

@@ -22,34 +22,44 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
     cursor: none;
+    @include padHorizon {
+        cursor:auto;
+    }
 }
 
 .container{
     width: 100%;
-    // border: 5px solid $theme-color-light;
 }
 
 .header{
+    @include flex(flex-end, center);
     box-sizing: content-box;
-    // background: rgba($theme-color-dark, $alpha: 0.8);
     background-color: $theme-color-dark;
     width: 100%;
     height: 75px;
-    @include flex(flex-end, center);
     position: fixed;
     top: 0;
     right: 0;
     z-index: 10;
     border-bottom: 2px solid $theme-color-light;
+    @include mobile {
+        height: 60px;
+    }
 }
 
-.list{
-    position: relative;
+.headerList{
     @include flex (flex-start, flex-start);
     flex-direction:  row-reverse;
+    position: relative;
     width: 25%;
     padding: 1% 3%;
-    font-size: 20px;
+    font-size: $mediumSize;
+    @include padHorizon {
+        width: 50%;
+    }
+    @include mobile {
+        width: 100%;
+    }
     li a{
         margin-right: 7px;
         padding: 7px 0px;
@@ -71,11 +81,20 @@ body{
             text-indent: 0%;
             width: 100px;
             border-left: 3px solid $theme-color-dark;
+            @include mobile {
+                width: 80px;
+            }
         }
         &:hover{
             color: #FFF;
             opacity: 1;
+            @include padHorizon {
+                cursor: pointer;
+            }
         }
+    }
+    @include padHorizon {
+        cursor: pointer;
     }
     .work{
         position: relative;
@@ -97,6 +116,10 @@ body{
             transform: scale(1, 0);
             transition: 0.3s ease all;
             opacity: 0.3;
+            @include mobile {
+                top: 120%;
+                width: 85px;
+            }
             li{
                 padding: 10%; 
                 text-align: center;
@@ -106,6 +129,9 @@ body{
                 &:hover{
                     background-color: $theme-color-light;
                     color: $theme-color-dark;
+                    @include padHorizon {
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -116,15 +142,43 @@ body{
     @include flex;
     height: 200px;
     border-top: 2px solid $theme-color-light;
-    padding-top: 50px;
+    padding-top: 3%;
+    margin-bottom: 3%;
+    @include padHorizon {
+        padding-top: 5%;
+        margin-bottom: 5%;
+    }
+    @include pad {
+        height: unset;
+        padding-top: 5%;
+        margin-bottom: 5%;
+    }
+    @include mobile {
+        flex-direction: column;
+        padding-top: 10%;
+        margin-bottom: 10%;
+    }
     .footerImg{
         width: 180px;
         height: 180px;
         margin-right: 5%;
+        @include pad {
+            width: 150px;
+            height: 150px;
+        }
+        @include mobile {
+            width: 120px;
+            height: 120px;
+            margin-right: unset;
+        }
     }
     p{
-        font-size: 18px;
+        font-size: $mediumSize;
         line-height: 30px;
+        @include mobile {
+            text-align: center;
+            font-size: $smallSize;
+        }
     }
 }
 
@@ -145,5 +199,8 @@ body{
             width: 2%;
             padding-bottom: 2%;
         }
+    }
+    @include padHorizon {
+        display: none;
     }
 }

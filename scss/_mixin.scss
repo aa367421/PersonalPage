@@ -4,13 +4,19 @@
     overflow: hidden;
 }
 
+@mixin padHorizon {
+    @media (max-width: 1200px){
+        @content;
+    }
+}
+
 @mixin pad {
     @media (max-width: 820px) {
         @content;
     }
 }
 
-@mixin phone {
+@mixin mobile {
     @media (max-width: 425px) {
         @content;
     }
@@ -20,7 +26,7 @@
     width: 25%;
     height: 50px;
     text-align: center;
-    font-size: $contentSize;
+    font-size: $largeSize;
     font-family: 'microsoft jhenghei';
     background-color: $theme-color-dark;
     color: $theme-color-light;
