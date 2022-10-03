@@ -176,6 +176,7 @@ body{
         font-size: $mediumSize;
         line-height: 30px;
         @include mobile {
+            padding: 20px 0px;
             text-align: center;
             font-size: $smallSize;
         }

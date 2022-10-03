@@ -11,6 +11,28 @@
             @include btn;
         }
     }
+    @include padHorizon {
+        form{
+            width: 50%;
+        }
+    }
+    @include pad {
+        form{
+            width: 60%;
+        }
+    }
+    @include mobile {
+        padding: 30px 0px;
+        form{
+            width: 100%;
+            @include flex(space-evenly);
+            button{
+                width: 20%;
+                height: 40px;
+                font-size: $mediumSize;
+            }
+        }
+    }
 }
 
 .workCard{
@@ -32,6 +54,19 @@
         img{
             object-fit: cover;
         }
+        p{
+            @include flex(center, flex-end);
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+            background: linear-gradient(rgba(16, 18, 17, 0) 10%, #000 90%);
+            font-size: $largeSize;
+            padding-bottom: 15px;
+            color: $theme-color-light;
+            transform: translate(0%, 80%);
+            transition: 0.5s ease all;
+        }
         &:hover{
             z-index: 1;
             transform: scale(1.05, 1.05);
@@ -39,19 +74,31 @@
                 transform: translate(0%, 0%);
             }
         }
+        @include padHorizon {
+            height: 250px;
+            p{
+                height: 80px;
+                transform: unset;
+            }
+            &:hover{
+                transform: unset;
+                p{
+                    transform: unset;
+                }
+            }
+        }
+        @include pad {
+            width: 50%;
+        }
     }
-    p{
-        @include flex(center, flex-end);
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        bottom: 0;
-        background: linear-gradient(rgba(16, 18, 17, 0) 10%, #000 90%);
-        font-size: $largeSize;
-        padding-bottom: 15px;
-        color: $theme-color-light;
-        transform: translate(0%, 80%);
-        transition: 0.5s ease all;
+    @include mobile {
+        margin-bottom: unset;
+        li{
+            width: 100%;
+            p{
+                font-size: $mediumSize;
+            }
+        }
     }
 }
 
@@ -84,6 +131,13 @@
     }
 }
 
+@include pad {
+    :root {
+        --swiper-navigation-color: $theme-color-light;
+        --swiper-theme-color: #FFF;
+    }
+}
+
 .lightboxContent{
     @include flex;
     width: 70%;
@@ -93,6 +147,19 @@
     border: 2px solid $theme-color-light;
     border-radius: 1%;
     overflow: hidden;
+    @include padHorizon {
+        width: 85%;
+    }
+    @include pad {
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+    }
+    @include mobile {
+        width: 80%;
+        height: 60%;
+        flex-direction: column;
+    }
     .lightboxImg{
         @include flex;
         flex-wrap: wrap;
@@ -113,6 +180,36 @@
             width: 100%;
             height: 50%;
         }
+        @include padHorizon {
+            img:hover{
+                transform: unset;
+            }
+        }
+        @include pad {
+            width: 100%;
+            height: 40%;
+            padding: 0% 5%;
+            .swiper-slide{
+                a{
+                    width: 100%;
+                    height: 100%;
+                    max-height: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        max-height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        @include mobile {
+            height: 70%;
+        }
     }
     .lightboxText{
         @include flex(flex-start, flex-start);
@@ -121,6 +218,7 @@
         height: 100%;
         padding: 3% 2% 1.5% 2%;
         overflow-y: scroll;
+        text-align: left;
         h3{
             width: 100%;
             font-size: $titleSize;
@@ -130,7 +228,7 @@
             border-bottom: 2px solid $theme-color-light;
         }
         .jobAndDuring{
-            @include flex(space-between, flex-end);
+            @include flex(space-between, center);
             width: 100%;
             margin-bottom: 30px;
             .job{
@@ -150,7 +248,7 @@
                         font-size: 30px;
                     }
                     span{
-                        font-family: 'microsoft jhenhei';
+                        font-family: 'microsoft jhenghei';
                     }
                 }
             }
@@ -158,6 +256,56 @@
         p{
             font-size: $smallSize;
             line-height: 42px;
+        }
+        @include pad {
+            width: 100%; 
+        }
+        @include mobile {
+            h3{
+                font-size: $mediumSize;
+            }
+            .jobAndDuring{
+                margin-bottom: 15px;
+            }
+            .lightboxWorkDescription{
+                a{
+                    i{
+                        @include flex(flex-start, flex-start);
+                    }
+                }
+            }
+            p{
+                line-height: 32px;
+            }
+        }
+    }
+}
+@include pad {
+    #lightbox{
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 10000;
+        opacity: 1;
+        *{
+            z-index: 10000;
+            opacity: 1;
+        }
+        .lb-outerContainer{
+            top: -15%;
+            margin: 0 auto;
+            background: $theme-color-dark;
+            @include mobile {
+                top: -25%;
+            }
+            .lb-container{
+                img{
+                    border: 5px solid $theme-color-light;
+                }
+            }
+        }
+        .lb-dataContainer{
+            display: none !important;
         }
     }
 }
@@ -176,6 +324,15 @@
         width: 55%;
         height: 80%;
         object-fit: cover;
+        @include padHorizon {
+            width: 70%;
+        }
+        @include pad {
+            width: 90%;
+            height: auto;
+            max-height: 60%;
+            object-fit: contain;
+        }
     }
     &.active{
         z-index: 10000;

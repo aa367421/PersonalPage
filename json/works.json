@@ -73,7 +73,7 @@
         "video": "",
         "description": {
             "title": "劇場點餐 Side Project<br>《麥點餐》",
-            "job": "",
+            "job": "個人練習",
             "during": "2021.08",
             "content": "在劇場實習時，大家因習慣而使用PTT推文點餐，負責人再以手動彙整。因內容不易整理、難以迅速查詢等原因，偶有漏訂、拿錯餐等狀況發生。<br><br>這項 Side project 以 PHP 與 MySQL 的方式完成資料串接與處理，同時實裝了計算餐點總數、總金額等功能。<br><br>惟 RWD 部分在當時仍有不熟悉之處，未能良好運用。後因學校免空程序繁瑣、後繼維護有困難而停止使用。",
             "footer": "工具：HTML、CSS、PHP、MySQL、JavaScript、Sublime Text"
@@ -105,9 +105,9 @@
         "video": "https://www.youtube.com/embed/KiuOmw9pcvs",
         "description": {
             "title": "3D遊戲設計課程專案<br>《X'mas Corp.》",
-            "job": "API串接、UI實踐",
+            "job": "API串接、UI實踐、音效設計",
             "during": "2021.09 - 2022.01",
-            "content": "聖誕節前夕，聖誕老人的玩具倉庫陷入大火，要送給全世界小孩的禮物無依倖免，聖誕老人只好委託工廠，x'mas Corp.，要在24小時內將禮物通通做出來……<br><br>參考 OVERCOOK! 概念轉化而成，主要負責成績、換裝資訊的 API 串接，以及與美術之間的溝通、UI實踐。",
+            "content": "聖誕節前夕，聖誕老人的玩具倉庫陷入大火，要送給全世界小孩的禮物無依倖免，聖誕老人只好委託工廠，X'mas Corp.，要在24小時內將禮物通通做出來……<br><br>參考 OVERCOOK! 概念轉化而成，主要負責成績、換裝資訊的 API 串接，以及與美術之間的溝通、UI實踐。",
             "footer": "工具：Unity、C#、Figma、illustrator"
         }
     },
@@ -155,7 +155,7 @@
             "title": "虛擬實境藝術課程專案<br>《夢》",
             "job": "單人創作",
             "during": "2022.02 - 2022.08",
-            "content": "擷取了夢境的既視感、荒謬而有自成一格的邏輯等元素，以免費素材打造了這一場夢。<br><br>體驗中，對話框的內容會隨情境變化，同樣的門，同樣的城市，而又有著不同的視感。<br><br>門後，這次又會到哪裡呢？<br><br>後因疫情，期末展取消 VR 體驗，改為影片呈現。",
+            "content": "擷取了夢境的既視感、荒謬而又自成一格的邏輯等元素，以免費素材打造了這一場夢。<br><br>體驗中，對話框的內容會隨情境變化，同樣的門，同樣的城市，而又有著不同的視感。<br><br>門後，這次又會到哪裡呢？<br><br>後因疫情，期末展取消 VR 體驗，改為影片呈現。",
             "footer": "工具：Unity、C#、blender、illustrator、After Effects、Visual Studio Code"
         }
     },
@@ -185,7 +185,7 @@
         "video": "",
         "description": {
             "title": "《六角學院線上實習培訓計畫》",
-            "job": "",
+            "job": "個人練習",
             "during": "2022.07 - 2022.09",
             "content": "以線上影片教學的方式學習前端相關技能，課程內容包含 HTML、CSS、jQery 以及隨後銜接的 JavaScript 以及 RWD 概念。<br><br>課程中共有五項作業，設計稿均由六角學院提供，連結如下。<br><br><a href='https://aa367421.github.io/HexSchoolHW1/' target='_blank'><i class='fa-brands fa-github'><span>　作業一：單頁式網站實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW2/' target='_blank'><i class='fa-brands fa-github'><span>　作業二：jQuery、燈箱、swiper實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW3/' target='_blank'><i class='fa-brands fa-github'><span>　作業三：多頁式網站實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW4/' target='_blank'><i class='fa-brands fa-github'><span>　作業四-1：JavaScript Todo List實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW4_API/' target='_blank'><i class='fa-brands fa-github'><span>　作業四-2：Todo List API 串接實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW5/' target='_blank'><i class='fa-brands fa-github'><span>　作業五：JavaScript 比價網 API 串接實作</span></i></a>",
             "footer": "工具：HTML、CSS、JavaScript、Visual Studio Code"

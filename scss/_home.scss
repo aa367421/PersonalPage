@@ -66,7 +66,7 @@
         display: block;
         width: 900px;
         height: 200px;
-        @include padHorizon{
+        @include padHorizon {
             display: none;
         }
         path{
@@ -108,11 +108,11 @@
         font-size: 0px;
         opacity: 0;
         animation: TitleBig 1s 2s ease-out forwards;
-        @include padHorizon{
+        @include padHorizon {
             top: 33%;
             animation: TitleBig 1s 1s ease-out forwards;
         }
-        @include pad{
+        @include pad {
             animation: TitleBigPad 1s 1s ease-out forwards;
         }
         @include mobile {
@@ -126,10 +126,10 @@
         font-size: 0px;
         opacity: 0;
         animation: TitleSmall 1s 2.5s ease-out forwards;
-        @include padHorizon{
+        @include padHorizon {
             animation: TitleSmall 1s 1.5s ease-out forwards;
         }
-        @include pad{
+        @include pad {
             animation: TitleSmallPad 1s 1.5s ease-out forwards;
         }
         @include mobile {
@@ -413,6 +413,9 @@
                     @include padHorizon {
                         cursor: pointer;
                     }
+                    @include mobile {
+                        margin: 0px 15px;
+                    }
                 }
             }
         }
@@ -438,8 +441,12 @@
             width: 100%;
             padding: 0% 10%;
             p{
+                font-size: 16px;
                 margin-right: unset;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+            }
+            .contactContentHref{
+                @include flex;
             }
         }
     }

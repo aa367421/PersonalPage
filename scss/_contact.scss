@@ -5,12 +5,18 @@
     @include padHorizon {
         width: 80%;
     }
-    @include pad{
+    @include pad {
         width: 100%;
+    }
+    @include mobile {
+        flex-direction: column;
     }
     .contactImg{
         width: 50%;
         text-align: center;
+        @include mobile {
+            width: 100%;
+        }
         img{
             width: 50%;
         }
@@ -20,6 +26,11 @@
         flex-direction: column;
         width: 50%;
         padding-left: 5%;
+        @include mobile {
+            @include flex;
+            padding: 0px 10%;
+            width: 100%;
+        }
         h1{
             font-size: $titleSize;
             line-height: 50px;
@@ -34,12 +45,17 @@
             @include pad {
                 font-size: $smallSize;
             }
+            @include mobile {
+                margin-bottom: 20px;
+            }
         }
         .icon{
             width: 100%;
             font-size: 36px;
-            @include pad {
-                font-size: 30px;
+            @include mobile {
+                @include flex(space-around, center);
+                font-size: 36px;
+                padding: 0px 10%;
             }
             a{
                 display: inline;

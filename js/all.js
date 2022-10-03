@@ -1,7 +1,9 @@
 const viewport = () => {
-    if (window.innerWidth >= 1200){
+    if (window.innerWidth > 1200){
         return 'pc';
-    } else if (window.innerWidth < 1200 && window.innerWidth >= 425){
+    } else if (window.innerWidth <= 1200 && window.innerWidth > 820){
+        return 'padHorizon';
+    } else if (window.innerWidth <= 820 && window.innerWidth > 425){
         return 'pad';
     } else {
         return 'mobile';
@@ -258,15 +260,20 @@ request.onload = () => {
         el.rel = "prefetch";
         el.href = href;
         el.crossorigin = "anonymous";
-        document.body.appendChild(el);
+        document.querySelector('.forPreload').appendChild(el);
     }
     let runScript = (src) => {
         el = document.createElement('script');
         el.src = src;
         el.defer = true;
-        document.body.appendChild(el);
+        document.querySelector('.forPreload').appendChild(el);
     }
 
+    
+    createPreloadEl("stylesheet", "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css");
+    createPreloadEl("stylesheet", "./css/lightbox.min.css");
+    createPreloadEl("script", "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js");
+    createPreloadEl("script", "./js/lightbox.min.js");
     createPreloadEl("script", "./js/work.js");
     createPreloadEl("script", "./js/about.js");
 
@@ -291,6 +298,9 @@ request.onload = () => {
         document.querySelector('.footerContact').style.display = 'none';
     }
     if (nowPage[0].slice(-4) == 'work'){
+
+        runScript("https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js");
+        runScript("./js/lightbox.min.js");
         runScript("./js/work.js");
     }
     if (nowPage[0].slice(-5) == 'about'){

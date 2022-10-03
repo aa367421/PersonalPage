@@ -1,3 +1,12 @@
+if (device != 'pc'){
+    let deviceRefresh = device;
+    window.addEventListener('resize', () => {
+        if (device != deviceRefresh && device != 'pc' && deviceRefresh != 'pc'){
+            window.location.href = location.href;
+        }
+    })
+}
+
 const buttonGroup = document.querySelector('.btnGroup');
 const btns = document.querySelectorAll('.btnGroup form button');
 const workCardList = document.querySelector('.workCard');
@@ -65,7 +74,35 @@ buttonGroup.addEventListener('click', (e) => {
         let imgRoot = `./img/workCard/${index}_${root}/`;
         let lightbox = document.querySelector('.lightbox');
 
-        let str = `<div class="lightboxContent">
+        let str;
+        if (device == 'pad' || device == 'mobile'){
+
+            str = `<div class="lightboxContent">
+            <div class="lightboxImg swiper">
+                <div class="swiper-wrapper">`
+                if (video != ""){
+                    str += `<div class="swiper-slide"><iframe src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+                }
+                for (let i=0; i<imgAmount;i++){
+                    str += `<div class="swiper-slide"><a href="${imgRoot}/img${i}.jpg" data-id="${i}" data-lightbox="${root}"><img src="${imgRoot}/img${i}.jpg" data-id="${i}"></a></div>`
+                }
+                str +=`</div><div class="swiper-pagination"></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div>
+            </div>
+            <div class="lightboxText">
+                <h3>${title}</h3>
+                <div class="jobAndDuring">
+                    <span class="job">${job}</span>
+                    <span>${during}</span>
+                </div>`
+            if (footer != ""){
+                str += `<p class="lightboxWorkDescription">${content}</p>
+                    <p class="lightboxFooter">${footer}</p>`
+            } else {
+                str += `<p>${content}</p>`
+            }
+            str +=`</div></div>`
+        } else {
+            str = `<div class="lightboxContent">
         <div class="lightboxImg">`
 
         for (let i=0; i<imgAmount;i++){
@@ -83,20 +120,44 @@ buttonGroup.addEventListener('click', (e) => {
             </div>`
         if (footer != ""){
             str += `<p class="lightboxWorkDescription">${content}</p>
-                <p class="lightboxFooter">${footer}</>`
+                <p class="lightboxFooter">${footer}</p>`
         } else {
             str += `<p>${content}</p>`
         }
-        str +=`</div></div>`
+            str +=`</div></div>`
+        }
 
         lightbox.innerHTML = str;
         lightbox.classList.add('active');
+
+        if (device == 'pad' || 'mobile'){
+            let swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: false,
+              
+                // autoplay: {
+                //     delay: 5000,
+                // },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                pagination: {
+                  el: '.swiper-pagination',
+                },
+              
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+              });
+        }
 
         let lightboxStatus = {
             "lightbox": false,
             "lightboxImgLarge": false
         }
-
 
         let closeLightboxByEsc = (e) => {
             if (e.key == "Escape"){
@@ -120,7 +181,6 @@ buttonGroup.addEventListener('click', (e) => {
                 item.style.objectFit = "contain";
             })
         }
-
         lightbox.addEventListener('click', (e) => {
             lightboxStatus.lightboxImgLarge = true;
 
@@ -129,27 +189,29 @@ buttonGroup.addEventListener('click', (e) => {
             }
             if (e.target.closest('.lightboxContent')){
                 e.preventDefault();
-                if (e.target.closest('img')){
-                    lightboxStatus.lightbox = true;
-
-                    let id = e.target.closest('img').dataset.id;
-                    let lightboxImgLarge = document.querySelector('.lightboxImgLarge');
-
-                    // get & render lightbox Large img
-                    lightboxImgLarge.classList.add('active');
-                    lightboxImgLarge.innerHTML = `<img src="${imgRoot}/img${id}.jpg" alt="">`;
-                    if (objectFit == "contain"){
-                        document.querySelector('.lightboxImgLarge img').style.objectFit = "contain";
-                    }
-
-                    lightboxImgLarge.addEventListener('click', (e) => {
-                        if (e.target.closest('img')){
-                            e.preventDefault();
-                        } else {
-                            lightboxStatus.lightboxImgLarge = false;
-                            lightboxImgLarge.classList.remove('active');
+                if (device =='pc' || device == 'padHorizon'){
+                    if (e.target.closest('img')){
+                        lightboxStatus.lightbox = true;
+    
+                        let id = e.target.closest('img').dataset.id;
+                        let lightboxImgLarge = document.querySelector('.lightboxImgLarge');
+    
+                        // get & render lightbox Large img
+                        lightboxImgLarge.classList.add('active');
+                        lightboxImgLarge.innerHTML = `<img src="${imgRoot}/img${id}.jpg" alt="">`;
+                        if (objectFit == "contain"){
+                            document.querySelector('.lightboxImgLarge img').style.objectFit = "contain";
                         }
-                    })
+    
+                        lightboxImgLarge.addEventListener('click', (e) => {
+                            if (e.target.closest('img')){
+                                e.preventDefault();
+                            } else {
+                                lightboxStatus.lightboxImgLarge = false;
+                                lightboxImgLarge.classList.remove('active');
+                            }
+                        })
+                    }
                 }
             } else if (e.target.closest('i')){
                 return; // link outside
