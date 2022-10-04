@@ -294,7 +294,7 @@ request.onload = () => {
     })
 
     let nowPage = location.href.split('.html');
-    if (nowPage[0].slice(-5) == 'index'){
+    if (nowPage[0].slice(-5) == 'index' || nowPage[0].slice(-5, -1) == 'Page'){
         document.querySelector('.footerContact').style.display = 'none';
     }
     if (nowPage[0].slice(-4) == 'work'){
