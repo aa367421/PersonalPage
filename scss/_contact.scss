@@ -64,6 +64,9 @@
                 i{
                     margin-right: 3%;
                 }
+                @include padHorizon {
+                    cursor: pointer;
+                }
             }
         }
     }

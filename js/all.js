@@ -93,7 +93,8 @@ $(document).ready(() => {
             "isClickNavBar": false,
             "isClickWork": false
         };
-        let checkClickPos = () => {
+
+        let checkClickStatus = () => {
             if ($(target).offset() != undefined){
                 clickStatus.isHomePage = true;
             }
@@ -104,7 +105,7 @@ $(document).ready(() => {
                 }
             }
         }
-        checkClickPos();
+        checkClickStatus();
 
         if (clickStatus.isClickWork == true && device != 'pc'){
             return;
@@ -156,7 +157,7 @@ if (cardList != null){
     let toTop = document.querySelector('.top');
     let homeTitle = document.querySelectorAll('.title');
     let [workTitle, aboutTitle, contactTitle] = homeTitle;
-    let homeStatus = {
+    let homeFadeStatus = {
         "work": false,
         "about": false,
         "contact": false,
@@ -177,14 +178,14 @@ if (cardList != null){
         */
 
         let contentPopUp = (nodeName, pos) => {
-            if (homeStatus[`${pos}`] != true){
+            if (homeFadeStatus[`${pos}`] != true){
                 nodeName.forEach((item, index) =>{
                     setTimeout(() => {
                         item.classList.add('active')
                     }, index * 150);
                 })
             }
-            homeStatus[`${pos}`] = true;
+            homeFadeStatus[`${pos}`] = true;
        }
         if (posCount > workTitle.offsetTop){
             contentPopUp(card, 'work');
@@ -195,12 +196,12 @@ if (cardList != null){
         if (posCount > contactTitle.offsetTop){
             contentPopUp(contact, 'contact');
             toTop.classList.add('active');
-            homeStatus.toTop = true;
+            homeFadeStatus.toTop = true;
         }
         
-        if (posCount < aboutTitle.offsetTop && homeStatus.toTop == true){
+        if (posCount < aboutTitle.offsetTop && homeFadeStatus.toTop == true){
             toTop.classList.remove('active');
-            homeStatus.toTop = false;
+            homeFadeStatus.toTop = false;
         }
     }
     window.addEventListener('scroll', () =>{

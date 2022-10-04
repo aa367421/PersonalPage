@@ -57,7 +57,7 @@ buttonGroup.addEventListener('click', (e) => {
     }
 })
 
- workCardList.addEventListener('click', (e) => {
+workCardList.addEventListener('click', (e) => {
     if (e.target.closest('li')){
         let index = e.target.closest('li').dataset.index;
         let cardObj = {};
@@ -75,55 +75,56 @@ buttonGroup.addEventListener('click', (e) => {
         let lightbox = document.querySelector('.lightbox');
 
         let str;
-        if (device == 'pad' || device == 'mobile'){
 
-            str = `<div class="lightboxContent">
-            <div class="lightboxImg swiper">
-                <div class="swiper-wrapper">`
-                if (video != ""){
-                    str += `<div class="swiper-slide"><iframe src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
-                }
-                for (let i=0; i<imgAmount;i++){
-                    str += `<div class="swiper-slide"><a href="${imgRoot}/img${i}.jpg" data-id="${i}" data-lightbox="${root}"><img src="${imgRoot}/img${i}.jpg" data-id="${i}"></a></div>`
-                }
-                str +=`</div><div class="swiper-pagination"></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div>
-            </div>
+        if (device == 'pad' || device == 'mobile'){
+            str = `<div class="lightboxContent"><div class="lightboxImg swiper"><div class="swiper-wrapper">`
+
+            if (video != ""){
+                str += `<div class="swiper-slide"><iframe src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+            }
+
+            for (let i=0; i<imgAmount;i++){
+                str += `<div class="swiper-slide"><a href="${imgRoot}/img${i}.jpg" data-id="${i}" data-lightbox="${root}"><img src="${imgRoot}/img${i}.jpg" data-id="${i}"></a></div>`
+            }
+
+            str +=`</div><div class="swiper-pagination"></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>
             <div class="lightboxText">
+            <h3>${title}</h3>
+            <div class="jobAndDuring">
+                <span class="job">${job}</span>
+                <span>${during}</span>
+            </div>`
+
+            if (footer != ""){
+                str += `<p class="lightboxWorkDescription">${content}</p><p class="lightboxFooter">${footer}</p>`
+            } else {
+                str += `<p>${content}</p>`
+            }
+
+            str +=`</div></div>`
+
+        } else {
+            str = `<div class="lightboxContent"><div class="lightboxImg">`
+
+            for (let i=0; i<imgAmount;i++){
+                str += `<img src="${imgRoot}/img${i}.jpg" data-id="${i}">`
+            }
+        
+            if (video != ""){
+                str += `<iframe src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+            }
+
+            str += `</div><div class="lightboxText">
                 <h3>${title}</h3>
                 <div class="jobAndDuring">
                     <span class="job">${job}</span>
                     <span>${during}</span>
                 </div>`
             if (footer != ""){
-                str += `<p class="lightboxWorkDescription">${content}</p>
-                    <p class="lightboxFooter">${footer}</p>`
+            str += `<p class="lightboxWorkDescription">${content}</p><p class="lightboxFooter">${footer}</p>`
             } else {
                 str += `<p>${content}</p>`
             }
-            str +=`</div></div>`
-        } else {
-            str = `<div class="lightboxContent">
-        <div class="lightboxImg">`
-
-        for (let i=0; i<imgAmount;i++){
-            str += `<img src="${imgRoot}/img${i}.jpg" data-id="${i}">`
-        }
-        if (video != ""){
-            str += `<iframe src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-        }
-        str += `</div>
-            <div class="lightboxText">
-                <h3>${title}</h3>
-                <div class="jobAndDuring">
-                <span class="job">${job}</span>
-                <span>${during}</span>
-            </div>`
-        if (footer != ""){
-            str += `<p class="lightboxWorkDescription">${content}</p>
-                <p class="lightboxFooter">${footer}</p>`
-        } else {
-            str += `<p>${content}</p>`
-        }
             str +=`</div></div>`
         }
 
@@ -132,13 +133,8 @@ buttonGroup.addEventListener('click', (e) => {
 
         if (device == 'pad' || 'mobile'){
             let swiper = new Swiper('.swiper', {
-                // Optional parameters
                 direction: 'horizontal',
                 loop: false,
-              
-                // autoplay: {
-                //     delay: 5000,
-                // },
                 effect: 'fade',
                 fadeEffect: {
                     crossFade: true
@@ -146,7 +142,6 @@ buttonGroup.addEventListener('click', (e) => {
                 pagination: {
                   el: '.swiper-pagination',
                 },
-              
                 navigation: {
                   nextEl: '.swiper-button-next',
                   prevEl: '.swiper-button-prev',
@@ -185,7 +180,7 @@ buttonGroup.addEventListener('click', (e) => {
             lightboxStatus.lightboxImgLarge = true;
 
             if (e.target.closest('i')){
-                return;
+                return; // link outside
             }
             if (e.target.closest('.lightboxContent')){
                 e.preventDefault();
@@ -213,9 +208,7 @@ buttonGroup.addEventListener('click', (e) => {
                         })
                     }
                 }
-            } else if (e.target.closest('i')){
-                return; // link outside
-            } else {
+            }  else {
                 lightboxStatus.lightbox = false;
                 lightbox.classList.remove('active');
                 document.removeEventListener('keydown', closeLightboxByEsc, false);
