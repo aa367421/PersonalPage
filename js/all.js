@@ -20,10 +20,16 @@ $(document).ready(() => {
     const list = document.querySelector('.headerList');
     const listContent = document.querySelectorAll('.headerList li a');
 
+    const bindLocateEvent = () => {
+        $('.headerList li a, .title a, .work ul li').click((e) => {
+            locate (e); 
+        })
+    }
+
     if (device == 'pc'){
         // Nav bar hover
+        bindLocateEvent();
         list.addEventListener('mouseenter', () => {
-            bindLocateEvent();
             listContent.forEach(item => {
                 item.classList.add('active');
             })
@@ -47,11 +53,6 @@ $(document).ready(() => {
     $('.headerList li a, .title a, .work ul li').click((e) => {
         e.preventDefault();
     })
-    let bindLocateEvent = () => {
-        $('.headerList li a, .title a, .work ul li').click((e) => {
-            locate (e); 
-        })
-    }
 
     let locate = (e) => {
         let ZoomAndLocate = (sec) => {
