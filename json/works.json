@@ -187,7 +187,7 @@
             "title": "《六角學院線上實習培訓計畫》",
             "job": "個人練習",
             "during": "2022.07 - 2022.09",
-            "content": "以線上影片教學的方式學習前端相關技能，課程內容包含 HTML、CSS、jQery 以及隨後銜接的 JavaScript 以及 RWD 概念。<br><br>課程中共有五項作業，設計稿均由六角學院提供，連結如下。<br><br><a href='https://aa367421.github.io/HexSchoolHW1/' target='_blank'><i class='fa-brands fa-github'><span>　作業一：單頁式網站實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW2/' target='_blank'><i class='fa-brands fa-github'><span>　作業二：jQuery、燈箱、swiper實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW3/' target='_blank'><i class='fa-brands fa-github'><span>　作業三：多頁式網站實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW4/' target='_blank'><i class='fa-brands fa-github'><span>　作業四-1：JavaScript Todo List實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW4_API/' target='_blank'><i class='fa-brands fa-github'><span>　作業四-2：Todo List API 串接實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW5/' target='_blank'><i class='fa-brands fa-github'><span>　作業五：JavaScript 比價網 API 串接實作</span></i></a>",
+            "content": "以線上影片教學的方式學習前端相關技能，課程內容包含 HTML、CSS、jQuery 以及隨後銜接的 JavaScript 以及 RWD 概念。<br><br>課程中共有五項作業，設計稿均由六角學院提供，連結如下。<br><br><a href='https://aa367421.github.io/HexSchoolHW1/' target='_blank'><i class='fa-brands fa-github'><span>　作業一：單頁式網站實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW2/' target='_blank'><i class='fa-brands fa-github'><span>　作業二：jQuery、燈箱、swiper實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW3/' target='_blank'><i class='fa-brands fa-github'><span>　作業三：多頁式網站實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW4/' target='_blank'><i class='fa-brands fa-github'><span>　作業四-1：JavaScript Todo List實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW4_API/' target='_blank'><i class='fa-brands fa-github'><span>　作業四-2：Todo List API 串接實作</span></i></a><a href='https://aa367421.github.io/HexSchoolHW5/' target='_blank'><i class='fa-brands fa-github'><span>　作業五：JavaScript 比價網 API 串接實作</span></i></a>",
             "footer": "工具：HTML、CSS、JavaScript、Visual Studio Code"
         }
     },
@@ -204,7 +204,23 @@
             "job": "個人練習",
             "during": "2022.10",
             "content": "將先前的麥點餐用新學習的工具（Bootstrap、Vue、firebase）重新製作，並以免空的方式部屬。<br><br>內容包含原有的點餐、統計餐點與價格外，還新增了判斷是否已過點餐期限、新增後台以讓使用者能夠直接編輯菜單、成員、封面圖片等功能。<br><br>連結如下。（已關閉資料庫寫入）<br><br><a href='https://aa367421.github.io/McOrder2.0/' target='_blank'><i class='fa-brands fa-github'><span>　麥點餐 McOrder2.0</span></i></a>",
-            "footer": "工具：HTML、CSS、JavaScript、Bootstrap 5、Vue3.0、firebase、isual Studio Code"
+            "footer": "工具：HTML、CSS、JavaScript、Bootstrap 5、Vue3.0、firebase、Visual Studio Code"
+        }
+    },
+    {
+        "index": "13",
+        "root": "operationdreamcapture",
+        "type": "other",
+        "typeText": "《Operation Dream Capture》",
+        "objectFit": "contain",
+        "imgAmount": "4",
+        "video": "https://www.youtube.com/watch?v=tMeLGf9nOhA",
+        "description": {
+            "title": "《Operation Dream Capture》",
+            "job": "程式",
+            "during": "2022.12.17 - 2022.12.18",
+            "content": "2022 黑客鬆 HacMuffin 第三組作品<br><br>身為夢之國的王子，你卻不會作夢。<br>自小，你的夢就被國王藏起，運用能力潛入國王的夢之城堡，取回你的夢吧！<br><br>企劃：楊承軒<br>美術：林育慈<br>音效、特效：李佩璇<br>程式：陳琪、李文哲<br><br>",
+            "footer": "工具：Unity、C#、Visual Studio Code"
         }
     }
 ]
