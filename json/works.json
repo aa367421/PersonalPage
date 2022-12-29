@@ -154,7 +154,7 @@
         "description": {
             "title": "虛擬實境藝術課程專案<br>《夢》",
             "job": "單人創作",
-            "during": "2022.02 - 2022.08",
+            "during": "2022.04 - 2022.06",
             "content": "擷取了夢境的既視感、荒謬而又自成一格的邏輯等元素，以免費素材打造了這一場夢。<br><br>體驗中，對話框的內容會隨情境變化，同樣的門，同樣的城市，而又有著不同的視感。<br><br>門後，這次又會到哪裡呢？<br><br>後因疫情，期末展取消 VR 體驗，改為影片呈現。",
             "footer": "工具：Unity、C#、blender、illustrator、After Effects、Visual Studio Code"
         }
