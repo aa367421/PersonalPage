@@ -209,6 +209,22 @@
     },
     {
         "index": "13",
+        "root": "thef2e2022",
+        "type": "frontend",
+        "typeText": "《The F2E 2022》",
+        "objectFit": "contain",
+        "imgAmount": "6",
+        "video": "",
+        "description": {
+            "title": "《The F2E 2022》",
+            "job": "個人前端組",
+            "during": "2022.11",
+            "content": "2022 The F2E 參賽作品<br><br>為期三週，每週都藉設計稿完成一個網頁的實裝。<br>最後成功完賽，當中第一週的作品獲得了初選佳作。<br><br><a href='https://2022.thef2e.com/users/12061549261446883396' target='_blank'><i class='fa-solid fa-globe'><span>　活動個人頁面</span></i></a><a href='https://aa367421.github.io/F2E_2022_W1/' target='_blank'><i class='fa-brands fa-github'><span>　第一週：The F2E 活動網站設計</span></i></a><a href='https://aa367421.github.io/F2E_2022_W2/' target='_blank'><i class='fa-brands fa-github'><span>　第二週：今晚，我想來點點簽</span></i></a><a href='https://aa367421.github.io/F2E_2022_W3/' target='_blank'><i class='fa-brands fa-github'><span>　第三週：Scrum 新手村</span></i></a><a href='https://2022.thef2e.com/users/12061549261454740203' target='_blank'><i class='fa-solid fa-globe'><span>　第一週設計稿 Credit：EG</span></i></a><a href='https://2022.thef2e.com/users/12061579703802991521' target='_blank'><i class='fa-solid fa-globe'><span>　第二週設計稿 Credit：K-T</span></i></a><a href='https://2022.thef2e.com/users/12061549261446456235' target='_blank'><i class='fa-solid fa-globe'><span>　第三週設計稿 Credit：小菜</span></i></a>",
+            "footer": "工具：HTML、CSS、SASS、JavaScript、GSAP、JS Draggable、Vue3.0、firebase、Visual Studio Code"
+        }
+    },
+    {
+        "index": "14",
         "root": "operationdreamcapture",
         "type": "other",
         "typeText": "《Operation Dream Capture》",
