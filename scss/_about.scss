@@ -21,7 +21,7 @@
         }
         .imgAndQuote{
             @include flex(space-between,center);
-            width: 60%;
+            width: 75%;
             padding: 0px 20px 40px 20px;
             margin-bottom: 40px;
             border-bottom: 5px solid $theme-color-light;
@@ -104,7 +104,7 @@
         .experience{
             @include flex(center, flex-start);
             flex-direction: column;
-            width: 60%;
+            width: 65%;
             padding: 0px 20px;
             @include padHorizon {
                 width: 80%;
