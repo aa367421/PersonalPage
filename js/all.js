@@ -187,7 +187,7 @@ if (cardList != null){
                 })
             }
             homeFadeStatus[`${pos}`] = true;
-       }
+        }
         if (posCount > workTitle.offsetTop){
             contentPopUp(card, 'work');
         }
