@@ -692,11 +692,17 @@ body {
     display: block;
     text-align: center;
   }
+  .about .aboutContent p span.mobile {
+    display: none;
+  }
   .about .pc {
     display: none;
   }
   .about .pad {
     display: block;
+  }
+  .about .mobile {
+    display: none;
   }
 }
 @media (max-width: 425px) {
@@ -713,6 +719,9 @@ body {
     display: none;
   }
   .about .aboutContent p .mobile {
+    display: block;
+  }
+  .about .aboutContent p span.mobile {
     display: block;
   }
 }
@@ -1215,8 +1224,6 @@ body {
   #lightbox .lb-outerContainer .lb-container img {
     border: 5px solid #f0f1f0;
   }
-}
-@media (max-width: 820px) {
   #lightbox .lb-dataContainer {
     display: none !important;
   }

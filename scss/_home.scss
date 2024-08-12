@@ -348,6 +348,9 @@
                     display: block;
                     text-align: center;
                 }
+                span.mobile{
+                    display: none;
+                }
             }
             
         }
@@ -356,6 +359,9 @@
         }
         .pad{
             display: block;
+        }
+        .mobile{
+            display: none;
         }
     }
     @include mobile {
@@ -367,13 +373,16 @@
                 margin-bottom: 10px;
             }
             p{
+                font-size: 16px;
                 .pad{
                     display: none;
                 }
                 .mobile{
                     display: block;
                 }
-                font-size: 16px;
+                span.mobile{
+                    display: block;
+                }
             }   
         }
     }
